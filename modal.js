@@ -9,7 +9,7 @@ function buildMetricsHTML(a) {
   return `
     <div class="mm"><div class="mm-val ${sc}">${a.cq}%</div><div class="mm-lbl">CQ Score</div></div>
     <div class="mm"><div class="mm-val white">${a.audits}</div><div class="mm-lbl">Audits</div></div>
-    <div class="mm"><div class="mm-val green">${a.ncf}</div><div class="mm-lbl">NCF</div></div>
+    <div class="mm"><div class="mm-val ${a.ncf > 0 ? 'red' : 'green'}">${a.ncf}</div><div class="mm-lbl">NCF</div></div>
     <div class="mm"><div class="mm-val orange">${a.totalErrors}</div><div class="mm-lbl">Total Errors</div></div>
     <div class="mm"><div class="mm-val red">${95 - a.cq}%</div><div class="mm-lbl">Gap to Target</div></div>`;
 }
@@ -27,6 +27,11 @@ function buildModalBody(agentKey, highlightParam) {
     ? `${gap}% below individual target (85%)`
     : `✓ Individual target met · ${teamTarget - a.cq > 0 ? (teamTarget - a.cq) + '% to team target (95%)' : 'Team target met!'}`;
   const pctColor = a.cq >= 90 ? '#b8860b' : a.cq >= 85 ? '#16a34a' : '#ea580c';
+
+  // Note for Mallika
+  if (a.note) {
+    html += `<div style="background:var(--blue-pale);border:1px solid var(--blue);border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:var(--blue);"><strong>ℹ Note:</strong> ${a.note}</div>`;
+  }
 
   html += `
     <div class="modal-sec-lbl">CQ Score</div>
@@ -71,7 +76,7 @@ function buildModalBody(agentKey, highlightParam) {
   });
   html += `</div>`;
 
-  html += `<div class="modal-sec-lbl">Audit Cases — ${a.audits} total</div>`;
+  html += `<div class="modal-sec-lbl">Audit Cases — ${a.audits} total${a.note ? ' (see note above)' : ''}</div>`;
   a.cases.forEach((c, i) => {
     const hl = highlightParam && a.paramCaseMap[highlightParam] && a.paramCaseMap[highlightParam].includes(i);
     const sbClass = getScoreBadgeClass(c.score);
@@ -98,7 +103,7 @@ function openModal(agentKey, highlightParam) {
   const a = AGENTS[agentKey];
   if (!a) return;
   document.getElementById('m-name').textContent = a.name;
-  document.getElementById('m-role').textContent = 'Experience Team · February 2025';
+  document.getElementById('m-role').textContent = 'Experience Team · March 2026';
   document.getElementById('m-metrics').innerHTML = buildMetricsHTML(a);
   document.getElementById('m-body').innerHTML = buildModalBody(agentKey, highlightParam || null);
   document.getElementById('modal-overlay').classList.add('open');
