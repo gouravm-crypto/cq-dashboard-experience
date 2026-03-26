@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CQ Dashboard · Experience · February 2025</title>
+<title>CQ Dashboard · Experience · March 2026</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 [data-theme="light"] {
@@ -46,7 +46,6 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;background:var(--body);color:var(--txt);-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .3s,color .3s;}
-
 .hdr{background:var(--navy2);border-bottom:2px solid var(--gold);position:sticky;top:0;z-index:900;height:60px;display:flex;align-items:center;padding:0 40px;gap:16px;}
 .hdr-logo{height:34px;width:34px;object-fit:contain;border-radius:6px;background:#fff;padding:2px;flex-shrink:0;}
 .hdr-brand{display:flex;flex-direction:column;}
@@ -61,7 +60,6 @@ body{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;background:var(--b
 .pdf-btn{background:rgba(200,168,70,.12);border:1.5px solid rgba(200,168,70,.4);color:var(--gold);padding:5px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all .2s;white-space:nowrap;}
 .pdf-btn:hover{background:rgba(200,168,70,.22);color:var(--gold-lt);}
 .hdr-badge{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1.5px solid rgba(200,168,70,.4);padding:4px 12px;border-radius:20px;background:rgba(200,168,70,.08);white-space:nowrap;}
-
 .hero{background:linear-gradient(160deg,#0a0a18 0%,#1a2436 55%,#1c2e40 100%);padding:52px 0 44px;border-bottom:2px solid var(--gold);text-align:center;position:relative;overflow:hidden;}
 .hero-glow{position:absolute;top:-80px;right:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(200,168,70,.1) 0%,transparent 70%);pointer-events:none;}
 .hero-glow2{position:absolute;bottom:-80px;left:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(168,85,247,.1) 0%,transparent 70%);pointer-events:none;}
@@ -76,13 +74,9 @@ body{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;background:var(--b
 .hs:last-child{border-right:none;}
 .hs:hover{background:rgba(255,255,255,.06);}
 .hs-val{font-family:Georgia,serif;font-size:32px;font-weight:800;line-height:1;margin-bottom:4px;}
-.hs-val.gold{color:var(--gold);}
-.hs-val.green{color:var(--green-lt);}
-.hs-val.red{color:#f87171;}
-.hs-val.white{color:#fff;}
+.hs-val.gold{color:var(--gold);}.hs-val.green{color:var(--green-lt);}.hs-val.red{color:#f87171;}.hs-val.white{color:#fff;}
 .hs-lbl{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);}
 @keyframes heroIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-
 .main{max-width:1100px;margin:0 auto;padding:0 40px 80px;}
 section{padding:48px 0;text-align:center;}
 section+section{border-top:1px solid var(--section-bdr);}
@@ -90,7 +84,6 @@ section+section{border-top:1px solid var(--section-bdr);}
 .sec-ey::before,.sec-ey::after{content:'';width:14px;height:1.5px;background:var(--gold);}
 .sec-ttl{font-family:Georgia,serif;font-size:clamp(22px,3vw,34px);font-weight:700;color:var(--txt);margin-bottom:6px;}
 .sec-sub{font-size:13px;color:var(--txt3);margin-bottom:28px;line-height:1.65;max-width:600px;margin-left:auto;margin-right:auto;}
-
 .target-banner{background:linear-gradient(135deg,#0f1c2a 0%,#1a3050 100%);border:1.5px solid var(--gold);border-radius:14px;padding:22px 28px;margin-bottom:24px;text-align:center;}
 .tb-icon{font-size:28px;margin-bottom:8px;}
 .tb-lbl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
@@ -100,7 +93,8 @@ section+section{border-top:1px solid var(--section-bdr);}
 .tb-num{font-family:Georgia,serif;font-size:26px;font-weight:800;line-height:1;}
 .tb-num.gold{color:var(--gold);}.tb-num.green{color:var(--green-lt);}.tb-num.red{color:#f87171;}
 .tb-slbl{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.3);}
-
+.mallika-note{background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.3);border-radius:8px;padding:6px 12px;font-size:10px;color:rgba(37,99,235,.9);margin-top:4px;display:inline-block;}
+[data-theme="dark"] .mallika-note{color:rgba(147,197,253,.9);}
 .score-table{width:100%;border-collapse:collapse;border-radius:14px;overflow:hidden;box-shadow:var(--sh-md);}
 .score-table thead tr{background:#0f1c2a;}
 .score-table thead th{color:rgba(255,255,255,.6);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 16px;text-align:center;}
@@ -116,6 +110,7 @@ section+section{border-top:1px solid var(--section-bdr);}
 .agent-hint{font-size:10px;color:var(--txt3);margin-top:1px;}
 .total-nm{font-weight:700;color:var(--txt);}
 .ncf-badge{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--green-pale);color:var(--green);font-size:12px;font-weight:700;}
+.ncf-badge.ncf-flag{background:var(--red-pale);color:var(--red);}
 .bar-cell{display:flex;align-items:center;justify-content:center;gap:10px;}
 .bar-track{width:90px;height:7px;background:var(--bdr);border-radius:4px;overflow:hidden;flex-shrink:0;}
 .bar-fill{height:100%;border-radius:4px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);}
@@ -125,9 +120,9 @@ section+section{border-top:1px solid var(--section-bdr);}
 .pct{font-weight:700;font-size:14px;min-width:38px;text-align:left;}
 .c-gold{color:#b8860b;}.c-green{color:#16a34a;}.c-orange{color:#ea580c;}
 .ti{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:8px;white-space:nowrap;}
-.ti-near{background:var(--gold-pale);color:#92700a;}
+.ti-top{background:var(--gold-pale);color:#92700a;}
+.ti-near{background:var(--green-pale);color:#166534;}
 .ti-below{background:var(--red-pale);color:var(--red);}
-
 .insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px;}
 .insight-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px;}
 .insight-grid-2 .ic{text-align:center;}
@@ -138,7 +133,6 @@ section+section{border-top:1px solid var(--section-bdr);}
 .ic-val{font-family:Georgia,serif;font-size:38px;font-weight:800;line-height:1;margin-bottom:6px;}
 .ic-val.gold{color:var(--gold);}.ic-val.green{color:var(--green);}.ic-val.red{color:var(--red);}.ic-val.orange{color:var(--orange);}.ic-val.blue{color:var(--blue);}.ic-val.purple{color:var(--purple);}
 .ic-sub{font-size:12px;color:var(--txt3);line-height:1.55;}
-
 .param-block{margin-bottom:10px;border-radius:12px;overflow:hidden;box-shadow:var(--sh-sm);}
 .param-hdr{background:#0f1c2a;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;transition:background .15s;}
 .param-hdr:hover{background:#1a2e44;}
@@ -153,12 +147,11 @@ section+section{border-top:1px solid var(--section-bdr);}
 .param-agent-row:hover{background:var(--table-hover);}
 .par-name{font-size:14px;font-weight:500;color:var(--txt);text-align:center;}
 .par-count{font-family:Georgia,serif;font-size:22px;font-weight:700;text-align:center;}
-.par-count.c10,.par-count.c9,.par-count.c8,.par-count.c7{color:var(--red);}
-.par-count.c6,.par-count.c5{color:var(--orange);}
-.par-count.c4,.par-count.c3,.par-count.c2,.par-count.c1{color:var(--blue);}
+.par-count.c7,.par-count.c8,.par-count.c9{color:var(--red);}
+.par-count.c4,.par-count.c5,.par-count.c6{color:var(--orange);}
+.par-count.c3,.par-count.c2,.par-count.c1{color:var(--blue);}
 .par-btn{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gold);padding:5px 12px;border:1.5px solid rgba(200,168,70,.35);border-radius:8px;background:transparent;cursor:pointer;text-align:center;transition:all .15s;}
 .par-btn:hover{background:var(--gold-pale);transform:scale(1.05);}
-
 .chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
 .chart-card{background:var(--chart-bg);border:1.5px solid var(--card-bdr);border-radius:14px;padding:22px 22px 18px;box-shadow:var(--sh-sm);text-align:left;transition:transform .2s,box-shadow .2s;}
 .chart-card:hover{transform:translateY(-2px);box-shadow:var(--sh-md);}
@@ -168,7 +161,6 @@ section+section{border-top:1px solid var(--section-bdr);}
 .cc-sub{font-size:11px;color:var(--txt3);margin-bottom:14px;line-height:1.4;}
 .ch{position:relative;width:100%;height:230px;}
 .ch canvas{position:absolute;top:0;left:0;width:100%!important;height:100%!important;}
-
 #modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(10px);z-index:999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
 #modal-overlay.open{opacity:1;pointer-events:all;}
 .modal{background:var(--surface);border-radius:20px;max-width:660px;width:95%;max-height:88vh;overflow:hidden;display:flex;flex-direction:column;transform:scale(.95) translateY(10px);transition:transform .3s cubic-bezier(.34,1.56,.64,1);box-shadow:var(--sh-lg),0 20px 60px rgba(0,0,0,.2);}
@@ -218,7 +210,6 @@ section+section{border-top:1px solid var(--section-bdr);}
 .better-item{font-size:13px;color:var(--txt2);line-height:1.6;padding:5px 0 5px 16px;position:relative;border-bottom:1px dotted var(--bdr);}
 .better-item:last-child{border-bottom:none;}
 .better-arrow{position:absolute;left:0;color:var(--gold);}
-
 .footer{background:#0f1c2a;border-top:2px solid var(--gold);padding:26px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;}
 .ft-left{display:flex;align-items:center;gap:10px;}
 .ft-logo{height:28px;background:#fff;border-radius:4px;padding:2px;}
@@ -226,7 +217,6 @@ section+section{border-top:1px solid var(--section-bdr);}
 .ft-tata{font-size:8px;letter-spacing:2px;color:rgba(255,255,255,.28);text-transform:uppercase;}
 .ft-right{text-align:right;font-size:11px;color:rgba(255,255,255,.3);line-height:1.9;}
 .ft-right strong{color:rgba(255,255,255,.5);}
-
 @media(max-width:700px){
   .hdr,.hero-inner,.main,.footer{padding-left:16px;padding-right:16px;}
   .hdr-auditor{display:none;}
@@ -247,7 +237,7 @@ section+section{border-top:1px solid var(--section-bdr);}
     <div class="hdr-tata">A Tata Product</div>
   </div>
   <div class="hdr-sep"></div>
-  <div class="hdr-title">CQ Dashboard &nbsp;·&nbsp; Experience &nbsp;·&nbsp; February 2025</div>
+  <div class="hdr-title">CQ Dashboard &nbsp;·&nbsp; Experience &nbsp;·&nbsp; March 2026</div>
   <div class="hdr-auditor">Auditor: Gourav M</div>
   <div class="hdr-actions">
     <button class="pdf-btn" onclick="window.print()">⬇ Export PDF</button>
@@ -261,14 +251,14 @@ section+section{border-top:1px solid var(--section-bdr);}
   <div class="hero-inner">
     <div class="hero-eyebrow">Quality Assurance &nbsp;·&nbsp; Experience Team</div>
     <div class="hero-title">CQ <span style="font-style:italic;">Dashboard</span></div>
-    <div class="hero-date">February 2025</div>
-    <div class="hero-sub">84 audits &nbsp;·&nbsp; 7 agents &nbsp;·&nbsp; Audited by Gourav M</div>
+    <div class="hero-date">March 2026</div>
+    <div class="hero-sub">33 audits &nbsp;·&nbsp; 5 agents &nbsp;·&nbsp; Audited by Gourav M</div>
     <div class="hero-stats">
-      <div class="hs"><div class="hs-val white" data-countup="84">84</div><div class="hs-lbl">Total Audits</div></div>
-      <div class="hs"><div class="hs-val gold" data-countup="83" data-suffix="%">83%</div><div class="hs-lbl">Team CQ</div></div>
+      <div class="hs"><div class="hs-val white" data-countup="33">33</div><div class="hs-lbl">Total Audits</div></div>
+      <div class="hs"><div class="hs-val gold" data-countup="79" data-suffix="%">79%</div><div class="hs-lbl">Team CQ</div></div>
       <div class="hs"><div class="hs-val white" data-countup="95" data-suffix="%">95%</div><div class="hs-lbl">Team Target</div></div>
-      <div class="hs"><div class="hs-val green" data-countup="0">0</div><div class="hs-lbl">NCF</div></div>
-      <div class="hs"><div class="hs-val red" data-countup="82">82</div><div class="hs-lbl">Total Errors</div></div>
+      <div class="hs"><div class="hs-val red" data-countup="3">3</div><div class="hs-lbl">NCF</div></div>
+      <div class="hs"><div class="hs-val red" data-countup="36">36</div><div class="hs-lbl">Total Errors</div></div>
     </div>
   </div>
 </div>
@@ -286,62 +276,54 @@ section+section{border-top:1px solid var(--section-bdr);}
       <div class="tb-lbl">Team Target</div>
       <div class="tb-txt">Individual target: <strong style="color:var(--gold-lt)">85%</strong> &nbsp;·&nbsp; Team target: <strong style="color:var(--gold)">95%</strong>. Agents in the 90%+ range are always appreciated. Everyone below their individual target has room to grow.</div>
       <div class="tb-right">
-        <div class="tb-stat"><div class="tb-num red">0</div><div class="tb-slbl">At Target</div></div>
-        <div class="tb-stat"><div class="tb-num gold">4</div><div class="tb-slbl">Above 85%</div></div>
-        <div class="tb-stat"><div class="tb-num red">3</div><div class="tb-slbl">Below 85%</div></div>
+        <div class="tb-stat"><div class="tb-num gold">2</div><div class="tb-slbl">Above 90%</div></div>
+        <div class="tb-stat"><div class="tb-num green">1</div><div class="tb-slbl">85–90% Range</div></div>
+        <div class="tb-stat"><div class="tb-num red">2</div><div class="tb-slbl">Below 85%</div></div>
       </div>
     </div>
 
     <table class="score-table">
       <thead><tr><th>Agent</th><th>Audits</th><th>NCF</th><th>CQ Score</th><th>vs Target</th></tr></thead>
       <tbody>
-        <tr onclick="openModal('kruti')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#c8a846;">KP</div><div><div class="agent-nm">Kruti_P</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>12</td><td><span class="ncf-badge">0</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-green" data-width="88"></div></div><span class="pct c-green">88%</span></div></td>
-          <td><span class="ti ti-below">–7% to target</span></td>
+        <tr onclick="openModal('tisha')">
+          <td><div class="agent-cell"><div class="agent-av" style="background:#c8a846;">TJ</div><div><div class="agent-nm">Tisha_J</div><div class="agent-hint">Click to view full report →</div></div></div></td>
+          <td>5</td><td><span class="ncf-badge">0</span></td>
+          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-gold" data-width="96"></div></div><span class="pct c-gold">96%</span></div></td>
+          <td><span class="ti ti-top">+1% above target</span></td>
         </tr>
-        <tr onclick="openModal('gourav')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#16a34a;">GM</div><div><div class="agent-nm">Gourav_M</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>12</td><td><span class="ncf-badge">0</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-green" data-width="87"></div></div><span class="pct c-green">87%</span></div></td>
-          <td><span class="ti ti-below">–8% to target</span></td>
+        <tr onclick="openModal('mallika')">
+          <td><div class="agent-cell"><div class="agent-av" style="background:#16a34a;">MR</div><div>
+            <div class="agent-nm">Mallika_R</div>
+            <div class="agent-hint">Click to view full report →</div>
+            <div class="mallika-note">ℹ 13 audits — 8 IB + 5 EXP (transition month)</div>
+          </div></div></td>
+          <td>13</td><td><span class="ncf-badge">0</span></td>
+          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-gold" data-width="93"></div></div><span class="pct c-gold">93%</span></div></td>
+          <td><span class="ti ti-near">–2% to target</span></td>
+        </tr>
+        <tr onclick="openModal('kruti')">
+          <td><div class="agent-cell"><div class="agent-av" style="background:#2563eb;">KP</div><div><div class="agent-nm">Kruti_P</div><div class="agent-hint">Click to view full report →</div></div></div></td>
+          <td>5</td><td><span class="ncf-badge">0</span></td>
+          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-green" data-width="89"></div></div><span class="pct c-green">89%</span></div></td>
+          <td><span class="ti ti-below">–6% to target</span></td>
+        </tr>
+        <tr onclick="openModal('ajmal')">
+          <td><div class="agent-cell"><div class="agent-av" style="background:#dc2626;">AA</div><div><div class="agent-nm">Ajmal_A</div><div class="agent-hint">Click to view full report →</div></div></div></td>
+          <td>5</td><td><span class="ncf-badge ncf-flag">2</span></td>
+          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="60"></div></div><span class="pct c-orange">60%</span></div></td>
+          <td><span class="ti ti-below">–35% to target</span></td>
         </tr>
         <tr onclick="openModal('ankita')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#2563eb;">AR</div><div><div class="agent-nm">Ankita_R</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>12</td><td><span class="ncf-badge">0</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-green" data-width="86"></div></div><span class="pct c-green">86%</span></div></td>
-          <td><span class="ti ti-below">–9% to target</span></td>
-        </tr>
-        <tr onclick="openModal('tisha')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#7c3aed;">TJ</div><div><div class="agent-nm">Tisha_J</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>12</td><td><span class="ncf-badge">0</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-green" data-width="84"></div></div><span class="pct c-green">84%</span></div></td>
-          <td><span class="ti ti-below">–11% to target</span></td>
-        </tr>
-        <tr onclick="openModal('sayoni')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#ea580c;">SP</div><div><div class="agent-nm">Sayoni_P</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>12</td><td><span class="ncf-badge">0</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="80"></div></div><span class="pct c-orange">80%</span></div></td>
-          <td><span class="ti ti-below">–15% to target</span></td>
-        </tr>
-        <tr onclick="openModal('pratiksha')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#dc2626;">PK</div><div><div class="agent-nm">Pratiksha_K</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>12</td><td><span class="ncf-badge">0</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="78"></div></div><span class="pct c-orange">78%</span></div></td>
-          <td><span class="ti ti-below">–17% to target</span></td>
-        </tr>
-        <tr onclick="openModal('saakshi')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#7c3aed;">SS</div><div><div class="agent-nm">Saakshi_S</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>12</td><td><span class="ncf-badge">0</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="77"></div></div><span class="pct c-orange">77%</span></div></td>
-          <td><span class="ti ti-below">–18% to target</span></td>
+          <td><div class="agent-cell"><div class="agent-av" style="background:#7c3aed;">AR</div><div><div class="agent-nm">Ankita_R</div><div class="agent-hint">Click to view full report →</div></div></div></td>
+          <td>5</td><td><span class="ncf-badge ncf-flag">1</span></td>
+          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="58"></div></div><span class="pct c-orange">58%</span></div></td>
+          <td><span class="ti ti-below">–37% to target</span></td>
         </tr>
         <tr class="total-row">
           <td><span class="total-nm">Grand Total</span></td>
-          <td>84</td><td><span class="ncf-badge">0</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-green" data-width="83"></div></div><span class="pct c-green">83%</span></div></td>
-          <td><span class="ti ti-below">–12% to target</span></td>
+          <td>33</td><td><span class="ncf-badge ncf-flag">3</span></td>
+          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="79"></div></div><span class="pct c-orange">79%</span></div></td>
+          <td><span class="ti ti-below">–16% to target</span></td>
         </tr>
       </tbody>
     </table>
@@ -353,36 +335,32 @@ section+section{border-top:1px solid var(--section-bdr);}
     <div class="sec-ttl">Key Observations</div>
     <div class="sec-sub">At-a-glance team health, top performers, biggest gaps, and risk flags.</div>
     <div class="insight-grid">
-      <div class="ic gold"><div class="ic-label">⭐ Top Performer</div><div class="ic-val gold">88%</div><div class="ic-sub"><strong>Kruti_P</strong> leads the team at 88% — 7% gap to team target. Strong and consistent.</div></div>
-      <div class="ic green"><div class="ic-label">✅ Zero NCF</div><div class="ic-val green">0</div><div class="ic-sub">All 7 agents maintained zero Non CaratLane Friendly cases this month.</div></div>
-      <div class="ic red"><div class="ic-label">⚠ Needs Attention</div><div class="ic-val red">77%</div><div class="ic-sub"><strong>Saakshi_S</strong> — lowest CQ, 18% below team target. Focused coaching required.</div></div>
-      <div class="ic orange"><div class="ic-label">🔴 Most Error-Prone Parameter</div><div class="ic-val orange">39</div><div class="ic-sub"><strong>Soft Skills</strong> — tone, empathy and positive phrasing across the team.</div></div>
-      <div class="ic blue"><div class="ic-label">📊 Avg Gap to Target</div><div class="ic-val blue">–12%</div><div class="ic-sub">Team average is 83% vs 95% target. Consistent improvement needed across all agents.</div></div>
-      <div class="ic purple"><div class="ic-label">🏷 Zero Tagging &amp; Etiquette</div><div class="ic-val purple">0</div><div class="ic-sub">Team maintained zero Tagging and Call/Chat Etiquette errors this month. Well done.</div></div>
+      <div class="ic gold"><div class="ic-label">⭐ Top Performer</div><div class="ic-val gold">96%</div><div class="ic-sub"><strong>Tisha_J</strong> leads the team at 96% — above team target. Only 2 tagging errors across 5 audits. Excellent month.</div></div>
+      <div class="ic red"><div class="ic-label">⚠ NCF This Month</div><div class="ic-val red">3</div><div class="ic-sub"><strong>Ajmal_A (2 NCF)</strong> and <strong>Ankita_R (1 NCF)</strong>. Both require immediate focused coaching on ownership and follow-up.</div></div>
+      <div class="ic orange"><div class="ic-label">⚠ Needs Attention</div><div class="ic-val orange">58%</div><div class="ic-sub"><strong>Ankita_R</strong> — lowest CQ this month, 37% below team target. Solution and follow-up gaps across majority of audits.</div></div>
+      <div class="ic purple"><div class="ic-label">🔴 Most Error-Prone</div><div class="ic-val purple">14</div><div class="ic-sub"><strong>Tagging</strong> — highest error count this month. Consistent issue across 4 of 5 agents.</div></div>
+      <div class="ic blue"><div class="ic-label">📊 Avg Gap to Target</div><div class="ic-val blue">–16%</div><div class="ic-sub">Team average is 79% vs 95% target. Two agents significantly below individual target of 85%.</div></div>
+      <div class="ic green"><div class="ic-label">✨ Strong Performers</div><div class="ic-val green">2</div><div class="ic-sub"><strong>Tisha_J (96%)</strong> and <strong>Mallika_R (93%)</strong> both above 90% this month. Great work.</div></div>
     </div>
     <div class="insight-grid-2">
       <div class="ic gold">
         <div class="ic-label">📌 Agents Ranked by Total Errors</div>
         <div style="margin-top:10px;display:flex;flex-direction:column;gap:7px;">
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Pratiksha_K</span><span style="font-weight:700;color:var(--red);">17 errors</span></div>
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Sayoni_P</span><span style="font-weight:700;color:var(--red);">14 errors</span></div>
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Saakshi_S</span><span style="font-weight:700;color:var(--orange);">13 errors</span></div>
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Gourav_M</span><span style="font-weight:700;color:var(--orange);">11 errors</span></div>
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Kruti_P</span><span style="font-weight:700;color:var(--blue);">10 errors</span></div>
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Ankita_R</span><span style="font-weight:700;color:var(--blue);">9 errors</span></div>
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Tisha_J</span><span style="font-weight:700;color:var(--blue);">8 errors</span></div>
+          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Mallika_R</span><span style="font-weight:700;color:var(--red);">15 errors</span><span style="font-size:10px;color:var(--txt3);">(IB+EXP)</span></div>
+          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Ankita_R</span><span style="font-weight:700;color:var(--red);">8 errors</span></div>
+          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Ajmal_A</span><span style="font-weight:700;color:var(--orange);">6 errors</span></div>
+          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Kruti_P</span><span style="font-weight:700;color:var(--blue);">5 errors</span></div>
+          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Tisha_J</span><span style="font-weight:700;color:var(--blue);">2 errors</span></div>
         </div>
       </div>
       <div class="ic blue">
         <div class="ic-label">🎯 Biggest Gap Per Agent</div>
         <div style="margin-top:10px;display:flex;flex-direction:column;gap:7px;text-align:center;">
-          <div style="font-size:13px;color:var(--txt2);"><strong>Kruti_P</strong> — Probing &amp; Soft Skills (scripted tone)</div>
-          <div style="font-size:13px;color:var(--txt2);"><strong>Gourav_M</strong> — Probing (rating conversion missed)</div>
-          <div style="font-size:13px;color:var(--txt2);"><strong>Ankita_R</strong> — Soft Skills (monotony, scripted responses)</div>
-          <div style="font-size:13px;color:var(--txt2);"><strong>Tisha_J</strong> — Probing (assumptions before confirming facts)</div>
-          <div style="font-size:13px;color:var(--txt2);"><strong>Sayoni_P</strong> — Soft Skills (tone &amp; warmth)</div>
-          <div style="font-size:13px;color:var(--txt2);"><strong>Pratiksha_K</strong> — Soft Skills (stammering &amp; scripted)</div>
-          <div style="font-size:13px;color:var(--txt2);"><strong>Saakshi_S</strong> — Probing (timing &amp; relevance)</div>
+          <div style="font-size:13px;color:var(--txt2);"><strong>Tisha_J</strong> — Tagging (internal vs external)</div>
+          <div style="font-size:13px;color:var(--txt2);"><strong>Mallika_R</strong> — Soft Skills &amp; Tagging (IB audits)</div>
+          <div style="font-size:13px;color:var(--txt2);"><strong>Kruti_P</strong> — Tagging (recurring, all 3 errors)</div>
+          <div style="font-size:13px;color:var(--txt2);"><strong>Ajmal_A</strong> — Soft Skills &amp; Follow Up (NCF cases)</div>
+          <div style="font-size:13px;color:var(--txt2);"><strong>Ankita_R</strong> — Solution &amp; Follow Up (ownership gap)</div>
         </div>
       </div>
     </div>
@@ -395,66 +373,62 @@ section+section{border-top:1px solid var(--section-bdr);}
     <div class="sec-sub">Click a parameter header to expand. Click an agent row to open their full report with those cases highlighted.</div>
 
     <div class="param-block">
+      <div class="param-hdr" onclick="toggleParam('tag')">
+        <span class="param-hdr-name">Tagging</span>
+        <div class="param-hdr-right"><span class="param-hdr-count">14 errors</span><span class="param-arrow" id="parr-tag">▼</span></div>
+      </div>
+      <div class="param-body" id="pbody-tag">
+        <div class="param-agent-row" onclick="openModal('mallika','tag')"><span class="par-name">Mallika_R</span><span class="par-count c7">7</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('kruti','tag')"><span class="par-name">Kruti_P</span><span class="par-count c3">3</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('tisha','tag')"><span class="par-name">Tisha_J</span><span class="par-count c2">2</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('ajmal','tag')"><span class="par-name">Ajmal_A</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('ankita','tag')"><span class="par-name">Ankita_R</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
+      </div>
+    </div>
+
+    <div class="param-block">
       <div class="param-hdr" onclick="toggleParam('ss')">
         <span class="param-hdr-name">Soft Skills</span>
-        <div class="param-hdr-right"><span class="param-hdr-count">39 errors</span><span class="param-arrow" id="parr-ss">▼</span></div>
+        <div class="param-hdr-right"><span class="param-hdr-count">9 errors</span><span class="param-arrow" id="parr-ss">▼</span></div>
       </div>
       <div class="param-body" id="pbody-ss">
-        <div class="param-agent-row" onclick="openModal('pratiksha','ss')"><span class="par-name">Pratiksha_K</span><span class="par-count c10">10</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('sayoni','ss')"><span class="par-name">Sayoni_P</span><span class="par-count c7">7</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('gourav','ss')"><span class="par-name">Gourav_M</span><span class="par-count c5">5</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('ankita','ss')"><span class="par-name">Ankita_R</span><span class="par-count c5">5</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('saakshi','ss')"><span class="par-name">Saakshi_S</span><span class="par-count c5">5</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('kruti','ss')"><span class="par-name">Kruti_P</span><span class="par-count c4">4</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('tisha','ss')"><span class="par-name">Tisha_J</span><span class="par-count c3">3</span><button class="par-btn">View Cases</button></div>
-      </div>
-    </div>
-
-    <div class="param-block">
-      <div class="param-hdr" onclick="toggleParam('prob')">
-        <span class="param-hdr-name">Probing</span>
-        <div class="param-hdr-right"><span class="param-hdr-count">34 errors</span><span class="param-arrow" id="parr-prob">▼</span></div>
-      </div>
-      <div class="param-body" id="pbody-prob">
-        <div class="param-agent-row" onclick="openModal('pratiksha','prob')"><span class="par-name">Pratiksha_K</span><span class="par-count c6">6</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('saakshi','prob')"><span class="par-name">Saakshi_S</span><span class="par-count c6">6</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('gourav','prob')"><span class="par-name">Gourav_M</span><span class="par-count c5">5</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('sayoni','prob')"><span class="par-name">Sayoni_P</span><span class="par-count c5">5</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('kruti','prob')"><span class="par-name">Kruti_P</span><span class="par-count c4">4</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('ankita','prob')"><span class="par-name">Ankita_R</span><span class="par-count c4">4</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('tisha','prob')"><span class="par-name">Tisha_J</span><span class="par-count c4">4</span><button class="par-btn">View Cases</button></div>
-      </div>
-    </div>
-
-    <div class="param-block">
-      <div class="param-hdr" onclick="toggleParam('sol')">
-        <span class="param-hdr-name">Solution &amp; Recommendation</span>
-        <div class="param-hdr-right"><span class="param-hdr-count">8 errors</span><span class="param-arrow" id="parr-sol">▼</span></div>
-      </div>
-      <div class="param-body" id="pbody-sol">
-        <div class="param-agent-row" onclick="openModal('kruti','sol')"><span class="par-name">Kruti_P</span><span class="par-count c2">2</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('saakshi','sol')"><span class="par-name">Saakshi_S</span><span class="par-count c2">2</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('gourav','sol')"><span class="par-name">Gourav_M</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('tisha','sol')"><span class="par-name">Tisha_J</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('sayoni','sol')"><span class="par-name">Sayoni_P</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('pratiksha','sol')"><span class="par-name">Pratiksha_K</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('mallika','ss')"><span class="par-name">Mallika_R</span><span class="par-count c7">7</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('ajmal','ss')"><span class="par-name">Ajmal_A</span><span class="par-count c2">2</span><button class="par-btn">View Cases</button></div>
       </div>
     </div>
 
     <div class="param-block">
       <div class="param-hdr" onclick="toggleParam('fu')">
         <span class="param-hdr-name">Follow Up</span>
-        <div class="param-hdr-right"><span class="param-hdr-count">1 error</span><span class="param-arrow" id="parr-fu">▼</span></div>
+        <div class="param-hdr-right"><span class="param-hdr-count">6 errors</span><span class="param-arrow" id="parr-fu">▼</span></div>
       </div>
       <div class="param-body" id="pbody-fu">
-        <div class="param-agent-row" onclick="openModal('sayoni','fu')"><span class="par-name">Sayoni_P</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('ankita','fu')"><span class="par-name">Ankita_R</span><span class="par-count c3">3</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('ajmal','fu')"><span class="par-name">Ajmal_A</span><span class="par-count c2">2</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('kruti','fu')"><span class="par-name">Kruti_P</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
       </div>
     </div>
 
     <div class="param-block">
-      <div class="param-hdr" style="cursor:default;opacity:.8;">
-        <span class="param-hdr-name">Tagging</span>
-        <span style="font-size:12px;font-weight:700;color:#4ade80;">✓ 0 errors — Well done!</span>
+      <div class="param-hdr" onclick="toggleParam('sol')">
+        <span class="param-hdr-name">Solution &amp; Recommendation</span>
+        <div class="param-hdr-right"><span class="param-hdr-count">5 errors</span><span class="param-arrow" id="parr-sol">▼</span></div>
+      </div>
+      <div class="param-body" id="pbody-sol">
+        <div class="param-agent-row" onclick="openModal('ankita','sol')"><span class="par-name">Ankita_R</span><span class="par-count c3">3</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('kruti','sol')"><span class="par-name">Kruti_P</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('ajmal','sol')"><span class="par-name">Ajmal_A</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
+      </div>
+    </div>
+
+    <div class="param-block">
+      <div class="param-hdr" onclick="toggleParam('prob')">
+        <span class="param-hdr-name">Probing</span>
+        <div class="param-hdr-right"><span class="param-hdr-count">2 errors</span><span class="param-arrow" id="parr-prob">▼</span></div>
+      </div>
+      <div class="param-body" id="pbody-prob">
+        <div class="param-agent-row" onclick="openModal('mallika','prob')"><span class="par-name">Mallika_R</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('ankita','prob')"><span class="par-name">Ankita_R</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
       </div>
     </div>
 
@@ -474,7 +448,7 @@ section+section{border-top:1px solid var(--section-bdr);}
     <div class="chart-grid">
       <div class="chart-card">
         <div class="cc-title">CQ Score vs Targets</div>
-        <div class="cc-sub">Agent scores vs individual (85%) &amp; team (95%) targets — sorted high to low</div>
+        <div class="cc-sub">Agent scores vs individual (85%) &amp; team (95%) targets</div>
         <div class="ch"><canvas id="scoreChart"></canvas></div>
       </div>
       <div class="chart-card">
@@ -502,7 +476,7 @@ section+section{border-top:1px solid var(--section-bdr);}
     <img src="logo_full.png" class="ft-logo" alt="CaratLane" onerror="this.style.display='none'">
     <div><div class="ft-brand">CaratLane</div><div class="ft-tata">A Tata Product</div></div>
   </div>
-  <div class="ft-right"><strong>CQ Dashboard — Experience</strong><br>February 2025 · 84 Audits<br>Auditor: <strong>Gourav M</strong> · Quality Analyst</div>
+  <div class="ft-right"><strong>CQ Dashboard — Experience</strong><br>March 2026 · 33 Audits<br>Auditor: <strong>Gourav M</strong> · Quality Analyst</div>
 </footer>
 
 <div id="modal-overlay">
@@ -538,7 +512,6 @@ function toggleDark() {
     });
   }
 })();
-
 function toggleParam(key) {
   const body = document.getElementById('pbody-' + key);
   const arrow = document.getElementById('parr-' + key);
@@ -546,7 +519,6 @@ function toggleParam(key) {
   body.classList.toggle('open');
   if (arrow) arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
 }
-
 function countUp(el, target, suffix, duration) {
   const startTime = performance.now();
   function update(now) {
@@ -559,14 +531,12 @@ function countUp(el, target, suffix, duration) {
   }
   requestAnimationFrame(update);
 }
-
 function animateBars() {
   document.querySelectorAll('.bar-fill[data-width]').forEach(bar => {
     const w = bar.getAttribute('data-width');
     setTimeout(() => { bar.style.width = w + '%'; }, 200);
   });
 }
-
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     document.querySelectorAll('[data-countup]').forEach(el => {
