@@ -15,8 +15,8 @@ function initCharts() {
       datasets: [
         {
           label: 'CQ Score',
-          data: [96, 93, 89, 60, 58],
-          backgroundColor: ['#c8a846','#c8a846','#3a9e50','#e07030','#e07030'],
+          data: [98, 98, 96, 96, 43],
+          backgroundColor: ['#c8a846','#c8a846','#c8a846','#c8a846','#e07030'],
           borderRadius: 6, barPercentage: 0.58, categoryPercentage: 0.8, order: 2
         },
         {
@@ -42,7 +42,7 @@ function initCharts() {
         legend: { display: true, position: 'bottom', labels: { font: { ...font, size: 11 }, boxWidth: 12, padding: 12, usePointStyle: true } }
       },
       scales: {
-        y: { min: 40, max: 100, ticks: { callback: v => v + '%', font: { ...font, size: 11 }, stepSize: 10 }, grid: { color: 'rgba(128,128,128,.1)' } },
+        y: { min: 30, max: 100, ticks: { callback: v => v + '%', font: { ...font, size: 11 }, stepSize: 10 }, grid: { color: 'rgba(128,128,128,.1)' } },
         x: { ticks: { font: { ...font, size: 11 }, maxRotation: 0 }, grid: { display: false } }
       }
     },
@@ -69,10 +69,10 @@ function initCharts() {
   new Chart(document.getElementById('errorChart'), {
     type: 'doughnut',
     data: {
-      labels: ['Tagging','Soft Skills','Follow Up','Solution & Rec.','Probing'],
+      labels: ['Soft Skills','Solution & Rec.','Probing','Follow Up','Tagging'],
       datasets: [{
-        data: [14, 9, 6, 5, 2],
-        backgroundColor: ['#7c3aed','#ea580c','#16a34a','#dc2626','#2563eb'],
+        data: [2, 4, 1, 3, 2],
+        backgroundColor: ['#ea580c','#dc2626','#2563eb','#16a34a','#7c3aed'],
         borderWidth: 2, borderColor: '#fff', hoverOffset: 8
       }]
     },
@@ -115,11 +115,11 @@ function initCharts() {
   new Chart(document.getElementById('agentErrorChart'), {
     type: 'bar',
     data: {
-      labels: ['Mallika_R','Ankita_R','Ajmal_A','Kruti_P','Tisha_J'],
+      labels: ['Ankita_R','Ajmal_A','Tisha_J','Mallika_R','Kruti_P'],
       datasets: [{
         label: 'Total Errors',
-        data: [15, 8, 6, 5, 2],
-        backgroundColor: ['#ea580c','#dc2626','#dc2626','#2563eb','#2563eb'],
+        data: [7, 2, 1, 1, 1],
+        backgroundColor: ['#e07030','#2563eb','#c8a846','#c8a846','#2563eb'],
         borderRadius: 6, barPercentage: 0.58, categoryPercentage: 0.8
       }]
     },
@@ -130,7 +130,7 @@ function initCharts() {
       layout: { padding: { right: 24, top: 4, bottom: 0 } },
       plugins: { tooltip, legend: { display: false } },
       scales: {
-        x: { min: 0, max: 18, ticks: { font: { ...font, size: 11 }, stepSize: 3 }, grid: { color: 'rgba(128,128,128,.1)' } },
+        x: { min: 0, max: 10, ticks: { font: { ...font, size: 11 }, stepSize: 1 }, grid: { color: 'rgba(128,128,128,.1)' } },
         y: { ticks: { font: { ...font, size: 11 } }, grid: { display: false } }
       }
     },
@@ -163,11 +163,11 @@ function buildHeatmap() {
   const agents = ['Tisha_J','Mallika_R','Kruti_P','Ajmal_A','Ankita_R'];
   const params = ['Soft Skills','Solution','Probing','Follow Up','Tagging'];
   const errors = [
-    [0, 0, 0, 0, 2],   // Tisha
-    [7, 0, 1, 0, 7],   // Mallika
-    [0, 1, 0, 1, 3],   // Kruti
-    [2, 1, 0, 2, 1],   // Ajmal
-    [0, 3, 1, 3, 1]    // Ankita
+    [0, 1, 0, 0, 0],   // Tisha
+    [0, 1, 0, 0, 0],   // Mallika
+    [0, 0, 0, 0, 1],   // Kruti
+    [0, 1, 0, 1, 0],   // Ajmal
+    [2, 1, 1, 2, 1]    // Ankita
   ];
 
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
@@ -193,8 +193,7 @@ function buildHeatmap() {
   h += `</tr></thead><tbody>`;
 
   agents.forEach((a, i) => {
-    const isMallika = a === 'Mallika_R';
-    h += `<tr><td style="font-size:12px;font-weight:600;padding:3px 8px;white-space:nowrap;color:${txP};">${a}${isMallika ? `<span style="font-size:9px;color:${txS};font-weight:400;"> (IB+EXP)</span>` : ''}</td>`;
+    h += `<tr><td style="font-size:12px;font-weight:600;padding:3px 8px;white-space:nowrap;color:${txP};">${a}</td>`;
     errors[i].forEach(v => {
       const c = cell(v);
       h += `<td style="padding:3px;"><div style="background:${c.bg};border:1px solid ${c.bd};border-radius:8px;padding:8px 2px;text-align:center;font-size:14px;font-weight:700;color:${c.tx};min-width:32px;">${v === 0 ? '✓' : v}</div></td>`;
