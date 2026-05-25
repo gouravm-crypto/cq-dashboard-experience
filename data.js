@@ -1,100 +1,98 @@
 const AGENTS = {
   tisha: {
     name:"Tisha_J", initials:"TJ", color:"#c8a846",
-    cq:96, audits:5, ncf:0, totalErrors:2,
-    params:{ss:0, sol:0, prob:0, fu:0, tag:2},
+    cq:98, audits:7, ncf:0, totalErrors:1,
+    params:{ss:0, sol:1, prob:0, fu:0, tag:0},
     aois:[
-      {cat:"tag", label:"Tagging", text:"Tagging accuracy — two audits flagged incorrect tagging. Always verify whether a ticket should be tagged as internal or external before closing. A well-resolved case loses marks only on tagging — make it a habit to double-check before submission."}
+      {cat:"sol", label:"Solution & Rec.", text:"Verify process details before advising cx — in the detractor callback, Tisha told the cx the feedback link could be reshared, which is incorrect once submitted. Always confirm what is actually possible before committing to a cx. A verbal rating should have been taken to manually update the score instead."}
     ],
     cases:[
-      {query:"Escalation handling", score:100, comment:"Good work handling the escalation. Connect with Abrar on call and get this closed today anyhow."},
-      {query:"Tagging error", score:91, comment:"Good job. AOI — Incorrect Tagging. Ensure ticket is not tagged internal when it should be external."},
-      {query:"Tech error — refund delay", score:91, comment:"iRate cx, bank details were not updated to the right email id. Tech error leading to refund delay. Good work on resolving and handling escalation cx with personal follow up! AOI — Tagging to be correct in future, it is not an internal email."},
-      {query:"Audit case", score:100, comment:"Good Work!"},
-      {query:"Audit case", score:100, comment:"Good Work"}
+      {query:"Store escalation — ticket", score:100, comment:"Good Work!!"},
+      {query:"Detractor callback — reshare feedback link", score:92, comment:"Cx rated by mistake, asked to reshare the feedback link. Tisha said ok sure. Incorrect statement — there is no option to reshare once submitted. Should have taken a verbal rating to manually change it."},
+      {query:"Detractor callback", score:100, comment:"Good work!"},
+      {query:"Detractor callback", score:100, comment:"Good work! AOI — Drop a WhatsApp and raise a ticket on such cases going forward (not mandatory but additional effort may prevent escalation to wow)."},
+      {query:"Detractor callback", score:100, comment:"Great Work!! AOI — Avoid using 'product ke related'. The rating is for overall experience, not just product."},
+      {query:"Detractor callback", score:100, comment:"Great Work!!"},
+      {query:"Detractor callback", score:100, comment:"Great Work!! AOI — Avoid using Ma'am/Sir multiple times."}
     ],
-    paramCaseMap:{ss:[], sol:[], prob:[], fu:[], tag:[1,2]}
+    paramCaseMap:{ss:[], sol:[1], prob:[], fu:[], tag:[]}
   },
   mallika: {
     name:"Mallika_R", initials:"MR", color:"#16a34a",
-    cq:93, audits:13, ncf:0, totalErrors:15,
-    note:"13 audits — 8 from IB team (start of month) + 5 from Experience team",
-    params:{ss:7, sol:0, prob:1, fu:0, tag:7},
+    cq:98, audits:7, ncf:0, totalErrors:1,
+    params:{ss:0, sol:1, prob:0, fu:0, tag:0},
     aois:[
-      {cat:"ss", label:"Soft Skills", text:"Empathy on calls — multiple IB audits flagged low empathy, especially when cx is irate about refund delays or process issues. Acknowledge the cx's frustration with ownership phrases before moving to resolution. Empathy is a must on every call."},
-      {cat:"tag", label:"Tagging", text:"Tagging discipline — majority of IB audits and one EXP audit flagged incorrect or missing tags. Always tag the ticket correctly before closing. This is a consistent AOI and needs to be a priority going forward."},
-      {cat:"prob", label:"Probing", text:"Complete information before closing — in the POP cancellation case, missed informing cx of the full redemption and cash-out timeline. Always share complete policy details so cx has everything they need in one go."}
+      {cat:"sol", label:"Solution & Rec.", text:"Connect with the cx directly — when a store reaches out for help with a difficult crown customer, advising them to follow policy is correct but incomplete. Whenever feasible, attempt to connect with the cx personally. A direct conversation from the escalation team often de-escalates what a store-level interaction cannot."}
     ],
     cases:[
-      {query:"15 Days Moneyback (IB)", score:100, comment:"Cx contacted about return status under 15-day moneyback. JC checked details and tried to retain cx. When cx wanted to proceed, JC helped accordingly. Overall a good call."},
-      {query:"Refund Status (IB)", score:100, comment:"Cx raised LTB and refund not yet credited. Cx was irate due to delay. JC informed details and TAT. Good handling of an irate cx."},
-      {query:"Order Status (IB)", score:100, comment:"Overall a fine chat for the delay in dispatch and delivery of the order."},
-      {query:"Refund (IB)", score:88, comment:"Cx contacted about RTO order refund. JC informed update and raised RTO request. AOI — couldn't understand what cx tried to mention at the end. Could have transferred call to IVR for a cleaner close."},
-      {query:"Order Status (IB)", score:100, comment:"Order delivery status — JC checked and informed TAT of 24 hrs for delivery and confirmed phone number."},
-      {query:"GWD (IB)", score:88, comment:"GWD query — JC informed refund was done on 19th Feb and transaction number was shared. AOI — needs a little more empathy on call since cx has not yet received the amount."},
-      {query:"POP Cancellation (IB)", score:41, comment:"POP cancellation query. JC informed POP redemption details but missed informing cx about the full cash-out process — post 90 days transfer to Digi Gold with deductions and GST. No empathy on call. Incomplete information shared."},
-      {query:"Refund Status (IB)", score:100, comment:"Cx called again for refund update. JC checked and informed TAT. ERP issue acknowledged. Good handling."},
-      {query:"Repair Status (EXP)", score:100, comment:"Well Done!"},
-      {query:"Repair Status (EXP)", score:91, comment:"Cx had a query with repair status. Mallika checked details and got it expedited. Proper follow up made with detailed notes. Good work! AOI — failed to tag in Ameyo while doing outbound call."},
-      {query:"Customer Support (EXP)", score:100, comment:"Well Done! AOI — Empathy is a must."},
-      {query:"Support (EXP)", score:100, comment:"Good Job!"},
-      {query:"GWD (EXP)", score:100, comment:"Handled well, educated the store as well. Very good."}
+      {query:"Store escalation — GWD", score:100, comment:"Good Work!!"},
+      {query:"Store escalation — educated store on process", score:100, comment:"Good Work, educated the store on this."},
+      {query:"Store escalation", score:100, comment:"Good Work!!"},
+      {query:"Store escalation — respective people added", score:100, comment:"Good Work!! Respective people added."},
+      {query:"Store escalation", score:100, comment:"Good Work!!"},
+      {query:"Crown customer — repair escalation", score:93, comment:"Store reached out via SE seeking assistance with a troublesome crown customer. Mallika advised the store to stick to policy as no other alternative is feasible. AOI — Mallika should have tried to connect with the cx herself at least once."},
+      {query:"Store escalation", score:100, comment:"Good Work!!"}
     ],
-    paramCaseMap:{ss:[1,2,3,4,5,6,7], sol:[], prob:[6], fu:[], tag:[1,2,4,5,6,7,9]}
+    paramCaseMap:{ss:[], sol:[5], prob:[], fu:[], tag:[]}
   },
   kruti: {
     name:"Kruti_P", initials:"KP", color:"#2563eb",
-    cq:89, audits:5, ncf:0, totalErrors:5,
-    params:{ss:0, sol:1, prob:0, fu:1, tag:3},
+    cq:96, audits:7, ncf:0, totalErrors:1,
+    params:{ss:0, sol:0, prob:0, fu:0, tag:1},
     aois:[
-      {cat:"tag", label:"Tagging", text:"Tagging — three out of five audits flagged incorrect tagging, including tickets tagged as internal when they should not be. Always verify the ticket type before submission. This is a recurring issue that directly impacts the score."},
-      {cat:"sol", label:"Solution", text:"Follow through on commitments — when a callback is committed, it must be done. In one case, the cx reached out again after another agent had already resolved the issue because Kruti's callback was missed. Always verify if the issue was already resolved before marking closed."},
-      {cat:"fu", label:"Follow Up", text:"Check existing tickets before committing a new callback — cross-checking alternate tickets avoids duplication, missed follow-ups, and unnecessary cx frustration."}
+      {cat:"tag", label:"Tagging", text:"Tagging when store is at fault — when the issue originates from a store error, the ticket must be tagged correctly and the escalation must be raised to RBM, RM, and BP (if applicable). Correct tagging is not just administrative — it determines who is held accountable and how the case is tracked."}
     ],
     cases:[
-      {query:"Missed callback", score:66, comment:"JC committed a callback but failed to connect with cx. Tisha had already taken care of it in an alternate ticket but Kruti failed to check. Store still asked for a second callback post Tisha's call. Could have done better."},
-      {query:"Tagging error", score:91, comment:"Good work. AOI — Tagging incorrect."},
-      {query:"Twitter escalation", score:100, comment:"Twitter escalation and ticket ongoing as well. Good work!"},
-      {query:"Tagging error", score:91, comment:"Excellent call but JC tagged the ticket as internal."},
-      {query:"Audit case", score:100, comment:"Good Work"}
+      {query:"Store escalation", score:100, comment:"Good work!!"},
+      {query:"Store escalation", score:100, comment:"Good Work!!"},
+      {query:"Store escalation", score:100, comment:"Good Work!!"},
+      {query:"Store escalation — multiple follow-ups pending", score:100, comment:"Good work!! AOI — If you see store and internal teams following up multiple times, add a follow-up email or call the respective store (Dehradun store in this case) for priority reply."},
+      {query:"Store escalation — tagging error", score:87, comment:"Good Work!! AOI — Since it is a store's mistake, you need to highlight it to the RBM, RM and BP (if applicable). Tagging to be corrected."},
+      {query:"Refund delay — escalation to wow", score:100, comment:"Customer's order was returned and there was a delay in refund. Cx reached out to the store. Kruti connected with the customer, shared the ARN number and followed up on the refund. Escalation converted to positive experience."},
+      {query:"Irate cx — delay delivery, compensation given", score:100, comment:"Customer was irate about delay in delivery and this was turning into a major escalation. Kruti spoke to the customer, provided a 3% delay compensation, and ensured the product arrived on time by reaching out to the right teams."}
     ],
-    paramCaseMap:{ss:[], sol:[0], prob:[], fu:[0], tag:[0,1,3]}
+    paramCaseMap:{ss:[], sol:[], prob:[], fu:[], tag:[4]}
   },
   ajmal: {
     name:"Ajmal_A", initials:"AA", color:"#dc2626",
-    cq:60, audits:5, ncf:2, totalErrors:6,
-    params:{ss:2, sol:1, prob:0, fu:2, tag:1},
+    cq:96, audits:7, ncf:0, totalErrors:2,
+    params:{ss:0, sol:1, prob:0, fu:1, tag:0},
     aois:[
-      {cat:"ss", label:"Soft Skills", text:"Phrase quality and interruptions — in both NCF cases, incorrect or casual phrases were used (e.g. 'We know waiting isn't fun') and cx was interrupted multiple times. Use ownership-driven, empathetic language especially when cx is already upset. Never interrupt a cx who is explaining a grievance."},
-      {cat:"fu", label:"Follow Up", text:"Follow up as committed — in two cases, follow-up was promised but not done. Cx had to reach out multiple times. Every commitment made on a call must be honoured. If a follow-up cannot be completed, escalate and notify before the deadline."},
-      {cat:"sol", label:"Solution", text:"Verify information before sharing — in one NCF case, incorrect details were given to the cx. Always confirm the details you are about to share, especially for complaint or grievance calls where cx trust is already low."}
+      {cat:"sol", label:"Solution & Rec.", text:"Escalate proactively when internal teams go silent — when the buying team failed to respond for 3+ days, Ajmal should have personally called the buying team, raised an SR ticket via support, or pinged the ticket in the Greenline group or escalated to Shrutiji. Adding the respective team is step one, not the last step."},
+      {cat:"fu", label:"Follow Up", text:"Personalised follow-up with the customer — dropping a WhatsApp to the customer when calls go unanswered is a standard follow-up protocol. Multiple callback attempts are noted and appreciated, but personalised outreach via WhatsApp ensures the cx feels attended to even when not reachable by call."}
     ],
     cases:[
-      {query:"Delay delivery — gold coin", score:100, comment:"Delay delivery of gold coin. Good call."},
-      {query:"NCF — grievance, nobody picking call", score:0, comment:"NCF — Customer was complaining about nobody picking the call on grievances. Consultant apologised but interrupted the customer multiple times. Failed to understand cx query. Incorrect details shared. Follow up missed on email despite cx reaching out several times."},
-      {query:"NCF — delay delivery complaint", score:0, comment:"NCF — Customer reached out with a complaint on delay delivery. Agent used incorrect phrases ('We know waiting isn't fun'). Failed to follow up as committed."},
-      {query:"Audit case", score:100, comment:"Good work."},
-      {query:"Audit case", score:100, comment:"Good work."}
+      {query:"Store escalation — internally handled", score:100, comment:"Good Work!! Internally handled — try to connect with the cx yourself as well so you get the escalation to wow."},
+      {query:"Store escalation", score:100, comment:"Good Work!!"},
+      {query:"Store escalation — TC related", score:100, comment:"Good Work!! AOI — Just add a follow-up note."},
+      {query:"Store escalation — product quality", score:100, comment:"Good Work!!"},
+      {query:"Store escalation", score:100, comment:"Good Work!!"},
+      {query:"Delay delivery — buying team unresponsive", score:92, comment:"Delay in order delivery, store needed urgent internal support. Ajmal added the respective team but they failed to revert for more than 3 days. AOI — Should have personally called the buying team or raised an SR ticket via support and pinged in Greenline group or to Shrutiji for further escalation."},
+      {query:"Delay in order — callback follow up", score:92, comment:"Store requested help with callback and assistance regarding order delay. Ajmal acted on the ticket with multiple callbacks. Ownership noted. AOI — Should always drop a WhatsApp to the customer in case of no response after two attempts."}
     ],
-    paramCaseMap:{ss:[1,2], sol:[1], prob:[], fu:[1,2], tag:[1]}
+    paramCaseMap:{ss:[], sol:[5], prob:[], fu:[6], tag:[]}
   },
   ankita: {
     name:"Ankita_R", initials:"AR", color:"#7c3aed",
-    cq:58, audits:5, ncf:1, totalErrors:8,
-    params:{ss:0, sol:3, prob:1, fu:3, tag:1},
+    cq:43, audits:7, ncf:4, totalErrors:7,
+    params:{ss:2, sol:1, prob:1, fu:2, tag:1},
     aois:[
-      {cat:"sol", label:"Solution", text:"Ownership on resolution — in multiple cases, Ankita added support teams or noted concerns without taking clear ownership of the next step. If we are added to a ticket, we must lead the resolution, not just observe. The cx and store should not have to follow up themselves."},
-      {cat:"fu", label:"Follow Up", text:"Committed follow-ups must be done — in three cases, callbacks or store notifications were committed but not completed. Cx had to reach out again, and in one case the store resolved it themselves. Every commitment is a trust promise — honour it."},
-      {cat:"prob", label:"Probing", text:"Read the urgency of the situation — in the NCF case, the cx was at the store floor and needed immediate backend support. Applying standard working-hour norms during a live escalation caused a delayed response. Always assess the urgency before applying process."}
+      {cat:"sol", label:"Solution & Rec.", text:"Understand the root cause before responding — in the profile name-change case, Ankita relayed the same incorrect response from the tech team twice without questioning it or re-escalating differently. And in the TC case, the issue was a miscommunication from the online team, not a store error — ownership should have been taken accordingly, not deflected."},
+      {cat:"ss", label:"Soft Skills", text:"Empathy and tone with store partners — a reply of 'I hope you are aware about the TC policy' to a store that had already tried convincing an irate floor cx is dismissive and sarcastic. Store escalations require the same care as cx calls. Acknowledge the difficulty of the situation before stating what is possible."},
+      {cat:"fu", label:"Follow Up", text:"Alternative follow-up when calls go unanswered — if a cx does not pick up after two attempts, a WhatsApp, SMS, or email must be sent to seek a convenient time for callback. Closing a ticket as 'nothing can be done' after two unanswered calls when a cx is iRate at store-floor level is not an acceptable resolution."},
+      {cat:"prob", label:"Probing", text:"Assess urgency before applying standard process — in the NCF case, the cx was on the store floor creating disturbance and the store needed immediate escalation support. Applying normal working-hour norms during a live floor escalation caused unnecessary delay. Always read the urgency of the situation."},
+      {cat:"tag", label:"Tagging", text:"Tagging compliance — one case was marked spam incorrectly. No tickets should be marked spam. Correct tagging is critical for case tracking and accountability."}
     ],
     cases:[
-      {query:"Store — order delay notification missed", score:50, comment:"Store reached out regarding a customer's order delay. JC failed to notify the store about updates or inform if someone from backend was already in touch. Failed to callback/notify the store or cx as committed. Ticket tagged as internal despite the store asking to call the cx."},
-      {query:"Order delay", score:100, comment:"Delay — Respective people added. Good work."},
-      {query:"NCF — ERP migration, store support", score:0, comment:"NCF — Customer concern regarding tech issues due to ERP migration. Store was unable to take an inward for exchange. Needed backend help to calm cx who was on the floor. Should not apply working-hour norms during live escalations. Delayed response. Missed follow up. Store resolved it themselves eventually."},
-      {query:"Ownership failure — store escalation", score:41, comment:"Consultant failed to take ownership and take required action by notifying the store on the process. Casually added the support team which the store could have done themselves. No point of being added if we fail to take ownership."},
-      {query:"Order delay", score:100, comment:"Order delay. Respective people added. Order dispatched. Good work."}
+      {query:"Store escalation — delay refund, cx callback", score:100, comment:"Good Work!!"},
+      {query:"Store escalation — follow up", score:100, comment:"Good Work!! Please maintain such type of follow ups."},
+      {query:"NCF — delay refund, cx not called for 5 days", score:0, comment:"Store asked team to call cx and update on 13th May. Team chose not to call until 18th, leaving cx without updates for 5+ days. Ticket was also marked spam. Marked NCF under ZTP. AOI — Always connect with cx if the store is asking us to. No tickets should be marked spam."},
+      {query:"Store escalation — good work", score:100, comment:"Good Work!!"},
+      {query:"NCF — TC policy, irate cx at store floor", score:0, comment:"Cx wanted to cancel an order with TC; was miscommunicated by online team that a moneyback was possible. Store sought escalation support. Ankita tried calling twice (unanswered), replied to store with 'I hope you are aware of the TC policy' — sarcastic and unhelpful. Closed ticket as nothing can be done. Store eventually retained the cx via exchange themselves. NCF."},
+      {query:"NCF — profile name change, tech team miscommunication", score:0, comment:"Store asked for help changing cx profile name for future orders. Ankita re-directed to tech team twice without verifying if the response was correct. Tech team failed to understand query both times. Ankita replied with the same incorrect response and closed the ticket. Store's issue went unresolved."},
+      {query:"NCF — profile name change (follow-up audit)", score:0, comment:"Follow-up audit on the same profile name change ticket. Issue remained unresolved. Tech team's incorrect response was relayed again without re-escalation or independent verification. Ticket closed without resolution."}
     ],
-    paramCaseMap:{ss:[], sol:[0,2,3], prob:[2], fu:[0,2,3], tag:[0]}
+    paramCaseMap:{ss:[2,4], sol:[4,5,6], prob:[4], fu:[2,4], tag:[2]}
   }
 };
 
