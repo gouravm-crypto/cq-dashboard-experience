@@ -103,7 +103,7 @@ function openModal(agentKey, highlightParam) {
   const a = AGENTS[agentKey];
   if (!a) return;
   document.getElementById('m-name').textContent = a.name;
-  document.getElementById('m-role').textContent = 'Experience Team · March 2026';
+  document.getElementById('m-role').textContent = 'Experience Team · May 2026';
   document.getElementById('m-metrics').innerHTML = buildMetricsHTML(a);
   document.getElementById('m-body').innerHTML = buildModalBody(agentKey, highlightParam || null);
   document.getElementById('modal-overlay').classList.add('open');
