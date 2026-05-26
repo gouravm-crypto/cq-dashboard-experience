@@ -74,25 +74,25 @@ const AGENTS = {
   },
   ankita: {
     name:"Ankita_R", initials:"AR", color:"#7c3aed",
-    cq:43, audits:7, ncf:4, totalErrors:7,
-    params:{ss:2, sol:1, prob:1, fu:2, tag:1},
+    cq:43, audits:7, ncf:4, totalErrors:6,
+    params:{ss:2, sol:1, prob:1, fu:1, tag:1},
     aois:[
-      {cat:"sol", label:"Solution & Rec.", text:"Understand the root cause before responding — in the profile name-change case, Ankita relayed the same incorrect response from the tech team twice without questioning it or re-escalating differently. And in the TC case, the issue was a miscommunication from the online team, not a store error — ownership should have been taken accordingly, not deflected."},
-      {cat:"ss", label:"Soft Skills", text:"Empathy and tone with store partners — a reply of 'I hope you are aware about the TC policy' to a store that had already tried convincing an irate floor cx is dismissive and sarcastic. Store escalations require the same care as cx calls. Acknowledge the difficulty of the situation before stating what is possible."},
-      {cat:"fu", label:"Follow Up", text:"Alternative follow-up when calls go unanswered — if a cx does not pick up after two attempts, a WhatsApp, SMS, or email must be sent to seek a convenient time for callback. Closing a ticket as 'nothing can be done' after two unanswered calls when a cx is iRate at store-floor level is not an acceptable resolution."},
-      {cat:"prob", label:"Probing", text:"Assess urgency before applying standard process — in the NCF case, the cx was on the store floor creating disturbance and the store needed immediate escalation support. Applying normal working-hour norms during a live floor escalation caused unnecessary delay. Always read the urgency of the situation."},
-      {cat:"tag", label:"Tagging", text:"Tagging compliance — one case was marked spam incorrectly. No tickets should be marked spam. Correct tagging is critical for case tracking and accountability."}
+      {cat:"sol", label:"Solution & Rec.", text:"Take ownership instead of re-directing — in two cases, Ankita redirected to other teams (store or tech) without adding any value beyond what the store had already tried. When the store has already attempted the same step, we must go further — share a policy link, address the cx directly, or re-escalate differently. Re-directing without adding value is not a resolution."},
+      {cat:"ss", label:"Soft Skills", text:"Tone with store partners — replying 'I hope you are aware about the TC policy' to a store that had already tried convincing an irate cx is dismissive and sarcastic. Store escalations require the same empathy and care as cx calls. Acknowledge the difficulty before stating what is possible."},
+      {cat:"fu", label:"Follow Up", text:"Alternative follow-up when calls go unanswered — dropping a WhatsApp, email or SMS is standard protocol after two unanswered call attempts. Closing a ticket as 'nothing can be done' while a cx is irate at store floor is not acceptable. Every commitment and every live escalation must be followed through."},
+      {cat:"prob", label:"Probing", text:"Read the urgency before applying standard process — in the TC case, the cx was on the store floor creating a scene. Applying normal follow-up norms during a live floor escalation caused unnecessary delay and further distress. Always assess urgency first."},
+      {cat:"tag", label:"Tagging", text:"No ticket should be marked spam — one case was incorrectly marked spam causing a 5-day gap in cx communication. Correct tagging is critical for accountability and case tracking."}
     ],
     cases:[
-      {query:"Store escalation — delay refund, cx callback", score:100, comment:"Good Work!!"},
+      {query:"Store escalation — Treasure Chest cancellation", score:0, comment:"Store reached out regarding a cx wanting to cancel a Treasure Chest due to product quality. Despite the store already informing the cx, Ankita re-directed back to the store without sharing the policy link, written confirmation, or addressing the cx herself. NCF — re-directing a store that had already tried the same approach without adding any value."},
+      {query:"Store escalation", score:100, comment:"Good Work!!"},
       {query:"Store escalation — follow up", score:100, comment:"Good Work!! Please maintain such type of follow ups."},
-      {query:"NCF — delay refund, cx not called for 5 days", score:0, comment:"Store asked team to call cx and update on 13th May. Team chose not to call until 18th, leaving cx without updates for 5+ days. Ticket was also marked spam. Marked NCF under ZTP. AOI — Always connect with cx if the store is asking us to. No tickets should be marked spam."},
-      {query:"Store escalation — good work", score:100, comment:"Good Work!!"},
-      {query:"NCF — TC policy, irate cx at store floor", score:0, comment:"Cx wanted to cancel an order with TC; was miscommunicated by online team that a moneyback was possible. Store sought escalation support. Ankita tried calling twice (unanswered), replied to store with 'I hope you are aware of the TC policy' — sarcastic and unhelpful. Closed ticket as nothing can be done. Store eventually retained the cx via exchange themselves. NCF."},
-      {query:"NCF — profile name change, tech team miscommunication", score:0, comment:"Store asked for help changing cx profile name for future orders. Ankita re-directed to tech team twice without verifying if the response was correct. Tech team failed to understand query both times. Ankita replied with the same incorrect response and closed the ticket. Store's issue went unresolved."},
-      {query:"NCF — profile name change (follow-up audit)", score:0, comment:"Follow-up audit on the same profile name change ticket. Issue remained unresolved. Tech team's incorrect response was relayed again without re-escalation or independent verification. Ticket closed without resolution."}
+      {query:"Store escalation — refund delay, cx not called", score:0, comment:"Store asked team to call cx and update on 13th May. Team chose not to call until 18th, leaving cx without updates for 5+ days. Ticket was also marked spam. NCF under ZTP. AOI — Always connect with cx if the store is asking. No tickets should be marked spam."},
+      {query:"Store escalation", score:100, comment:"Good Work!!"},
+      {query:"Store escalation — TC policy, irate cx at store floor", score:0, comment:"Store sought escalation support for irate cx miscommunicated by online team that moneyback was possible on TC order. Ankita tried calling twice (unanswered) but replied to store 'I hope you are aware about the TC policy' — rude and unhelpful. Closed as nothing can be done without dropping WhatsApp/email/SMS. Store retained cx via exchange themselves. NCF — failed ownership, tone, and follow-up standard."},
+      {query:"Store escalation — profile name change", score:0, comment:"Store requested help changing cx profile name for future orders. Redirected to tech team who failed to understand query twice. Ankita replied with same incorrect response and closed ticket without re-escalating differently. Store issue went unresolved."}
     ],
-    paramCaseMap:{ss:[2,4], sol:[4,5,6], prob:[4], fu:[2,4], tag:[2]}
+    paramCaseMap:{ss:[3,5], sol:[5], prob:[5], fu:[3], tag:[3]}
   }
 };
 
