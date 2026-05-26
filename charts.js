@@ -71,7 +71,7 @@ function initCharts() {
     data: {
       labels: ['Soft Skills','Solution & Rec.','Probing','Follow Up','Tagging'],
       datasets: [{
-        data: [2, 4, 1, 3, 2],
+        data: [2, 4, 1, 2, 2],
         backgroundColor: ['#ea580c','#dc2626','#2563eb','#16a34a','#7c3aed'],
         borderWidth: 2, borderColor: '#fff', hoverOffset: 8
       }]
@@ -118,7 +118,7 @@ function initCharts() {
       labels: ['Ankita_R','Ajmal_A','Tisha_J','Mallika_R','Kruti_P'],
       datasets: [{
         label: 'Total Errors',
-        data: [7, 2, 1, 1, 1],
+        data: [6, 2, 1, 1, 1],
         backgroundColor: ['#e07030','#2563eb','#c8a846','#c8a846','#2563eb'],
         borderRadius: 6, barPercentage: 0.58, categoryPercentage: 0.8
       }]
@@ -167,7 +167,7 @@ function buildHeatmap() {
     [0, 1, 0, 0, 0],   // Mallika
     [0, 0, 0, 0, 1],   // Kruti
     [0, 1, 0, 1, 0],   // Ajmal
-    [2, 1, 1, 2, 1]    // Ankita
+    [2, 1, 1, 1, 1]    // Ankita
   ];
 
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
