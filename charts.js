@@ -15,8 +15,8 @@ function initCharts() {
       datasets: [
         {
           label: 'CQ Score',
-          data: [98, 98, 96, 96, 43],
-          backgroundColor: ['#c8a846','#c8a846','#c8a846','#c8a846','#e07030'],
+          data: [48, 73, 29, 73, 57],
+          backgroundColor: ['#e07030','#e07030','#e07030','#e07030','#e07030'],
           borderRadius: 6, barPercentage: 0.58, categoryPercentage: 0.8, order: 2
         },
         {
@@ -42,7 +42,7 @@ function initCharts() {
         legend: { display: true, position: 'bottom', labels: { font: { ...font, size: 11 }, boxWidth: 12, padding: 12, usePointStyle: true } }
       },
       scales: {
-        y: { min: 30, max: 100, ticks: { callback: v => v + '%', font: { ...font, size: 11 }, stepSize: 10 }, grid: { color: 'rgba(128,128,128,.1)' } },
+        y: { min: 0, max: 100, ticks: { callback: v => v + '%', font: { ...font, size: 11 }, stepSize: 10 }, grid: { color: 'rgba(128,128,128,.1)' } },
         x: { ticks: { font: { ...font, size: 11 }, maxRotation: 0 }, grid: { display: false } }
       }
     },
@@ -66,13 +66,14 @@ function initCharts() {
   });
 
   // ── 2. Error Distribution Doughnut ──
+  // ss:3, sol:13, prob:0, fu:10, tag:4  (sum from all agents)
   new Chart(document.getElementById('errorChart'), {
     type: 'doughnut',
     data: {
-      labels: ['Soft Skills','Solution & Rec.','Probing','Follow Up','Tagging'],
+      labels: ['Soft Skills','Solution & Rec.','Follow Up','Tagging'],
       datasets: [{
-        data: [2, 4, 1, 2, 2],
-        backgroundColor: ['#ea580c','#dc2626','#2563eb','#16a34a','#7c3aed'],
+        data: [3, 13, 10, 4],
+        backgroundColor: ['#ea580c','#dc2626','#16a34a','#7c3aed'],
         borderWidth: 2, borderColor: '#fff', hoverOffset: 8
       }]
     },
@@ -115,11 +116,11 @@ function initCharts() {
   new Chart(document.getElementById('agentErrorChart'), {
     type: 'bar',
     data: {
-      labels: ['Ankita_R','Ajmal_A','Tisha_J','Mallika_R','Kruti_P'],
+      labels: ['Kruti_P','Tisha_J','Ankita_R','Ajmal_A','Mallika_R'],
       datasets: [{
         label: 'Total Errors',
-        data: [6, 2, 1, 1, 1],
-        backgroundColor: ['#e07030','#2563eb','#c8a846','#c8a846','#2563eb'],
+        data: [13, 9, 5, 4, 3],
+        backgroundColor: ['#e07030','#e07030','#e07030','#e07030','#e07030'],
         borderRadius: 6, barPercentage: 0.58, categoryPercentage: 0.8
       }]
     },
@@ -130,7 +131,7 @@ function initCharts() {
       layout: { padding: { right: 24, top: 4, bottom: 0 } },
       plugins: { tooltip, legend: { display: false } },
       scales: {
-        x: { min: 0, max: 10, ticks: { font: { ...font, size: 11 }, stepSize: 1 }, grid: { color: 'rgba(128,128,128,.1)' } },
+        x: { min: 0, max: 16, ticks: { font: { ...font, size: 11 }, stepSize: 1 }, grid: { color: 'rgba(128,128,128,.1)' } },
         y: { ticks: { font: { ...font, size: 11 } }, grid: { display: false } }
       }
     },
@@ -163,11 +164,11 @@ function buildHeatmap() {
   const agents = ['Tisha_J','Mallika_R','Kruti_P','Ajmal_A','Ankita_R'];
   const params = ['Soft Skills','Solution','Probing','Follow Up','Tagging'];
   const errors = [
-    [0, 1, 0, 0, 0],   // Tisha
-    [0, 1, 0, 0, 0],   // Mallika
-    [0, 0, 0, 0, 1],   // Kruti
-    [0, 1, 0, 1, 0],   // Ajmal
-    [2, 1, 1, 1, 1]    // Ankita
+    [1, 4, 0, 4, 2],   // Tisha
+    [1, 1, 0, 0, 0],   // Mallika
+    [0, 5, 0, 3, 1],   // Kruti
+    [1, 1, 0, 2, 0],   // Ajmal
+    [1, 2, 0, 1, 1]    // Ankita
   ];
 
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
