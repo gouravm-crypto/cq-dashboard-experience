@@ -4,45 +4,57 @@ function initCharts() {
     backgroundColor: '#1c2a3a',
     titleFont: { ...font, size: 12 },
     bodyFont:  { ...font, size: 11 },
-    padding: 10, cornerRadius: 8
+    padding: 10,
+    cornerRadius: 8
   };
 
-  // ── 1. CQ Score vs Targets ──
+  // CQ Score vs Targets, sorted high to low
   new Chart(document.getElementById('scoreChart'), {
     type: 'bar',
     data: {
-      labels: ['Tisha_J','Mallika_R','Kruti_P','Ajmal_A','Ankita_R'],
+      labels: ['Kruti_P','Tisha_J','Ankita_R'],
       datasets: [
         {
           label: 'CQ Score',
-          data: [48, 73, 29, 73, 57],
-          backgroundColor: ['#e07030','#e07030','#e07030','#e07030','#e07030'],
-          borderRadius: 6, barPercentage: 0.58, categoryPercentage: 0.8, order: 2
+          data: [96, 93, 43],
+          backgroundColor: ['#0891b2','#16a34a','#dc2626'],
+          borderRadius: 6,
+          barPercentage: 0.5,
+          categoryPercentage: 0.7,
+          order: 2
         },
         {
           label: 'Team Target 95%',
-          data: [95,95,95,95,95],
+          data: [95,95,95],
           type: 'line', borderColor: '#dc2626', borderWidth: 2,
           borderDash: [6,4], pointRadius: 0, fill: false, order: 1
         },
         {
           label: 'Individual Target 85%',
-          data: [85,85,85,85,85],
+          data: [85,85,85],
           type: 'line', borderColor: '#f59e0b', borderWidth: 1.5,
           borderDash: [3,3], pointRadius: 0, fill: false, order: 1
         }
       ]
     },
     options: {
-      responsive: true, maintainAspectRatio: false,
+      responsive: true,
+      maintainAspectRatio: false,
       animation: { duration: 1200, easing: 'easeOutQuart' },
       layout: { padding: { top: 16, bottom: 0 } },
       plugins: {
         tooltip,
-        legend: { display: true, position: 'bottom', labels: { font: { ...font, size: 11 }, boxWidth: 12, padding: 12, usePointStyle: true } }
+        legend: {
+          display: true, position: 'bottom',
+          labels: { font: { ...font, size: 11 }, boxWidth: 12, padding: 12, usePointStyle: true }
+        }
       },
       scales: {
-        y: { min: 0, max: 100, ticks: { callback: v => v + '%', font: { ...font, size: 11 }, stepSize: 10 }, grid: { color: 'rgba(128,128,128,.1)' } },
+        y: {
+          min: 0, max: 100,
+          ticks: { callback: v => v + '%', font: { ...font, size: 11 }, stepSize: 10 },
+          grid: { color: 'rgba(128,128,128,.1)' }
+        },
         x: { ticks: { font: { ...font, size: 11 }, maxRotation: 0 }, grid: { display: false } }
       }
     },
@@ -57,7 +69,8 @@ function initCharts() {
           if (bar.height < 14) return;
           ctx.fillStyle = '#fff';
           ctx.font = 'bold 11px Segoe UI,Arial,sans-serif';
-          ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
           ctx.fillText(val + '%', bar.x, bar.y + bar.height * 0.5);
         });
         ctx.restore();
@@ -65,25 +78,29 @@ function initCharts() {
     }]
   });
 
-  // ── 2. Error Distribution Doughnut ──
-  // ss:3, sol:13, prob:0, fu:10, tag:4  (sum from all agents)
+  // Error Distribution Doughnut
+  // Tagging:7, Solution:5, Soft Skills:2, Follow Up:1, Probing:1  total:16
   new Chart(document.getElementById('errorChart'), {
     type: 'doughnut',
     data: {
-      labels: ['Soft Skills','Solution & Rec.','Follow Up','Tagging'],
+      labels: ['Tagging','Solution & Rec.','Soft Skills','Follow Up','Probing'],
       datasets: [{
-        data: [3, 13, 10, 4],
-        backgroundColor: ['#ea580c','#dc2626','#16a34a','#7c3aed'],
+        data: [7, 5, 2, 1, 1],
+        backgroundColor: ['#7c3aed','#dc2626','#ea580c','#16a34a','#2563eb'],
         borderWidth: 2, borderColor: '#fff', hoverOffset: 8
       }]
     },
     options: {
-      responsive: true, maintainAspectRatio: false,
+      responsive: true,
+      maintainAspectRatio: false,
       animation: { animateRotate: true, animateScale: true, duration: 1200, easing: 'easeOutQuart' },
       layout: { padding: { top: 4, bottom: 0 } },
       plugins: {
         tooltip,
-        legend: { display: true, position: 'bottom', labels: { font: { ...font, size: 11 }, boxWidth: 12, padding: 10, usePointStyle: true } }
+        legend: {
+          display: true, position: 'bottom',
+          labels: { font: { ...font, size: 11 }, boxWidth: 12, padding: 10, usePointStyle: true }
+        }
       },
       cutout: '60%'
     },
@@ -97,14 +114,15 @@ function initCharts() {
         meta.data.forEach((arc, i) => {
           const val = chart.data.datasets[0].data[i];
           const pct = Math.round((val / total) * 100);
-          if (pct < 7) return;
+          if (pct < 8) return;
           const angle = (arc.startAngle + arc.endAngle) / 2;
           const r = (arc.innerRadius + arc.outerRadius) / 2;
           const x = arc.x + r * Math.cos(angle);
           const y = arc.y + r * Math.sin(angle);
           ctx.fillStyle = '#fff';
           ctx.font = 'bold 11px Segoe UI,Arial,sans-serif';
-          ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
           ctx.fillText(pct + '%', x, y);
         });
         ctx.restore();
@@ -112,26 +130,33 @@ function initCharts() {
     }]
   });
 
-  // ── 3. Errors per Agent ──
+  // Errors per Agent, worst to best top to bottom
   new Chart(document.getElementById('agentErrorChart'), {
     type: 'bar',
     data: {
-      labels: ['Kruti_P','Tisha_J','Ankita_R','Ajmal_A','Mallika_R'],
+      labels: ['Ankita_R','Kruti_P','Tisha_J'],
       datasets: [{
         label: 'Total Errors',
-        data: [13, 9, 5, 4, 3],
-        backgroundColor: ['#e07030','#e07030','#e07030','#e07030','#e07030'],
-        borderRadius: 6, barPercentage: 0.58, categoryPercentage: 0.8
+        data: [13, 2, 1],
+        backgroundColor: ['#dc2626','#2563eb','#c8a846'],
+        borderRadius: 6,
+        barPercentage: 0.5,
+        categoryPercentage: 0.7
       }]
     },
     options: {
-      responsive: true, maintainAspectRatio: false,
+      responsive: true,
+      maintainAspectRatio: false,
       indexAxis: 'y',
       animation: { duration: 1200, easing: 'easeOutQuart' },
       layout: { padding: { right: 24, top: 4, bottom: 0 } },
       plugins: { tooltip, legend: { display: false } },
       scales: {
-        x: { min: 0, max: 16, ticks: { font: { ...font, size: 11 }, stepSize: 1 }, grid: { color: 'rgba(128,128,128,.1)' } },
+        x: {
+          min: 0, max: 16,
+          ticks: { font: { ...font, size: 11 }, stepSize: 4 },
+          grid: { color: 'rgba(128,128,128,.1)' }
+        },
         y: { ticks: { font: { ...font, size: 11 } }, grid: { display: false } }
       }
     },
@@ -145,7 +170,8 @@ function initCharts() {
           const val = chart.data.datasets[0].data[i];
           ctx.fillStyle = '#fff';
           ctx.font = 'bold 11px Segoe UI,Arial,sans-serif';
-          ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+          ctx.textAlign = 'right';
+          ctx.textBaseline = 'middle';
           ctx.fillText(val, bar.x - 6, bar.y);
         });
         ctx.restore();
@@ -153,7 +179,6 @@ function initCharts() {
     }]
   });
 
-  // ── 4. Heatmap ──
   buildHeatmap();
 }
 
@@ -161,14 +186,13 @@ function buildHeatmap() {
   const container = document.getElementById('heatmapContainer');
   if (!container) return;
 
-  const agents = ['Tisha_J','Mallika_R','Kruti_P','Ajmal_A','Ankita_R'];
-  const params = ['Soft Skills','Solution','Probing','Follow Up','Tagging'];
+  // Sorted high to low by CQ: Kruti, Tisha, Ankita
+  const agents = ['Kruti_P','Tisha_J','Ankita_R'];
+  const params = ['Soft Skills','Solution','Probing','Tagging','Follow Up'];
   const errors = [
-    [1, 4, 0, 4, 2],   // Tisha
-    [1, 1, 0, 0, 0],   // Mallika
-    [0, 5, 0, 3, 1],   // Kruti
-    [1, 1, 0, 2, 0],   // Ajmal
-    [1, 2, 0, 1, 1]    // Ankita
+    [0, 0, 0, 2, 0],  // Kruti   total 2
+    [0, 1, 0, 0, 0],  // Tisha   total 1
+    [2, 4, 1, 5, 1]   // Ankita  total 13
   ];
 
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
@@ -176,8 +200,8 @@ function buildHeatmap() {
   function cell(v) {
     if (v === 0) return isDark ? { bg:'#052e16', bd:'#166534', tx:'#4ade80' } : { bg:'#f0fdf4', bd:'#bbf7d0', tx:'#166534' };
     if (v <= 2)  return isDark ? { bg:'#422006', bd:'#a16207', tx:'#fde68a' } : { bg:'#fef9c3', bd:'#fde047', tx:'#713f12' };
-    if (v <= 4)  return isDark ? { bg:'#431407', bd:'#c2410c', tx:'#fed7aa' } : { bg:'#fed7aa', bd:'#fb923c', tx:'#7c2d12' };
-    if (v <= 6)  return isDark ? { bg:'#450a0a', bd:'#991b1b', tx:'#fca5a5' } : { bg:'#fca5a5', bd:'#ef4444', tx:'#7f1d1d' };
+    if (v <= 3)  return isDark ? { bg:'#431407', bd:'#c2410c', tx:'#fed7aa' } : { bg:'#fed7aa', bd:'#fb923c', tx:'#7c2d12' };
+    if (v <= 4)  return isDark ? { bg:'#450a0a', bd:'#991b1b', tx:'#fca5a5' } : { bg:'#fca5a5', bd:'#ef4444', tx:'#7f1d1d' };
     return isDark ? { bg:'#7f1d1d', bd:'#dc2626', tx:'#fff' } : { bg:'#dc2626', bd:'#dc2626', tx:'#fff' };
   }
 
@@ -185,14 +209,12 @@ function buildHeatmap() {
   const txS = isDark ? '#9c8a70' : '#8a7a60';
   const txH = isDark ? '#6a5a50' : '#b8a888';
 
-  let h = `<div style="overflow-x:auto;"><table style="width:100%;border-collapse:separate;border-spacing:4px;min-width:340px;">
-    <thead><tr>
-      <th style="font-size:11px;font-weight:600;color:${txS};text-align:left;padding:2px 8px;white-space:nowrap;">Agent</th>`;
+  let h = `<div style="overflow-x:auto;"><table style="width:100%;border-collapse:separate;border-spacing:4px;min-width:340px;"><thead><tr>
+    <th style="font-size:11px;font-weight:600;color:${txS};text-align:left;padding:2px 8px;white-space:nowrap;">Agent</th>`;
   params.forEach(p => {
     h += `<th style="font-size:10px;font-weight:600;color:${txS};text-align:center;padding:2px 4px;white-space:nowrap;">${p}</th>`;
   });
   h += `</tr></thead><tbody>`;
-
   agents.forEach((a, i) => {
     h += `<tr><td style="font-size:12px;font-weight:600;padding:3px 8px;white-space:nowrap;color:${txP};">${a}</td>`;
     errors[i].forEach(v => {
@@ -208,8 +230,8 @@ function buildHeatmap() {
   h += `<div style="display:flex;align-items:center;gap:8px;margin-top:12px;justify-content:center;flex-wrap:wrap;">
     <span style="font-size:11px;color:${txS};">0</span>
     <div style="display:flex;gap:3px;">${lbg.map((bg,i)=>`<div style="width:16px;height:16px;border-radius:3px;background:${bg};border:1px solid ${lbd[i]};"></div>`).join('')}</div>
-    <span style="font-size:11px;color:${txS};">7+</span>
-    <span style="font-size:10px;color:${txH};margin-left:4px;">✓ = zero errors &nbsp;·&nbsp; lower is better</span>
+    <span style="font-size:11px;color:${txS};">5+</span>
+    <span style="font-size:10px;color:${txH};margin-left:4px;">check mark means zero errors, lower is better</span>
   </div>`;
 
   container.innerHTML = h;

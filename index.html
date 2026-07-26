@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CQ Dashboard · Experience · June 2026</title>
+<title>CQ Dashboard · Experience · July 2026</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 [data-theme="light"] {
@@ -74,7 +74,7 @@ body{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;background:var(--b
 .hs:last-child{border-right:none;}
 .hs:hover{background:rgba(255,255,255,.06);}
 .hs-val{font-family:Georgia,serif;font-size:32px;font-weight:800;line-height:1;margin-bottom:4px;}
-.hs-val.gold{color:var(--gold);}.hs-val.green{color:var(--green-lt);}.hs-val.red{color:#f87171;}.hs-val.white{color:#fff;}
+.hs-val.gold{color:var(--gold);}.hs-val.green{color:var(--green-lt);}.hs-val.red{color:#f87171;}.hs-val.orange{color:#fb923c;}.hs-val.white{color:#fff;}
 .hs-lbl{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);}
 @keyframes heroIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .main{max-width:1100px;margin:0 auto;padding:0 40px 80px;}
@@ -87,14 +87,19 @@ section+section{border-top:1px solid var(--section-bdr);}
 .target-banner{background:linear-gradient(135deg,#0f1c2a 0%,#1a3050 100%);border:1.5px solid var(--gold);border-radius:14px;padding:22px 28px;margin-bottom:24px;text-align:center;}
 .tb-icon{font-size:28px;margin-bottom:8px;}
 .tb-lbl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
-.tb-txt{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;max-width:500px;margin:0 auto 18px;}
+.tb-txt{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;max-width:520px;margin:0 auto 18px;}
 .tb-right{display:flex;gap:36px;justify-content:center;}
 .tb-stat{text-align:center;}
 .tb-num{font-family:Georgia,serif;font-size:26px;font-weight:800;line-height:1;}
 .tb-num.gold{color:var(--gold);}.tb-num.green{color:var(--green-lt);}.tb-num.red{color:#f87171;}
 .tb-slbl{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.3);}
-.mallika-note{background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.3);border-radius:8px;padding:6px 12px;font-size:10px;color:rgba(37,99,235,.9);margin-top:4px;display:inline-block;}
-[data-theme="dark"] .mallika-note{color:rgba(147,197,253,.9);}
+.bod-banner{background:linear-gradient(135deg,#241a05 0%,#3a2a08 100%);border:1.5px solid var(--gold);border-radius:14px;padding:26px 32px;margin-bottom:14px;text-align:left;}
+.bod-icon{font-size:22px;margin-bottom:10px;}
+.bod-lbl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.bod-txt{font-size:13px;color:rgba(255,255,255,.75);line-height:1.75;max-width:820px;}
+.bod-txt p{margin-bottom:12px;}
+.bod-txt p:last-child{margin-bottom:0;}
+.bod-txt strong{color:var(--gold-lt);}
 .score-table{width:100%;border-collapse:collapse;border-radius:14px;overflow:hidden;box-shadow:var(--sh-md);}
 .score-table thead tr{background:#0f1c2a;}
 .score-table thead th{color:rgba(255,255,255,.6);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:12px 16px;text-align:center;}
@@ -109,6 +114,7 @@ section+section{border-top:1px solid var(--section-bdr);}
 .agent-nm{font-weight:600;color:var(--txt);font-size:14px;}
 .agent-hint{font-size:10px;color:var(--txt3);margin-top:1px;}
 .total-nm{font-weight:700;color:var(--txt);}
+.improved-badge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:6px;background:var(--green-pale);color:var(--green);border:1px solid #bbf7d0;margin-left:6px;}
 .ncf-badge{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--green-pale);color:var(--green);font-size:12px;font-weight:700;}
 .ncf-badge.ncf-flag{background:var(--red-pale);color:var(--red);}
 .bar-cell{display:flex;align-items:center;justify-content:center;gap:10px;}
@@ -120,8 +126,8 @@ section+section{border-top:1px solid var(--section-bdr);}
 .pct{font-weight:700;font-size:14px;min-width:38px;text-align:left;}
 .c-gold{color:#b8860b;}.c-green{color:#16a34a;}.c-orange{color:#ea580c;}
 .ti{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:8px;white-space:nowrap;}
-.ti-top{background:var(--gold-pale);color:#92700a;}
-.ti-near{background:var(--green-pale);color:#166534;}
+.ti-above{background:var(--green-pale);color:#166534;}
+.ti-near{background:var(--gold-pale);color:#92700a;}
 .ti-below{background:var(--red-pale);color:var(--red);}
 .insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:14px;}
 .insight-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px;}
@@ -184,7 +190,7 @@ section+section{border-top:1px solid var(--section-bdr);}
 .gauge-track{height:10px;background:var(--bdr);border-radius:6px;overflow:hidden;position:relative;margin-bottom:4px;}
 .gauge-target{position:absolute;top:-2px;bottom:-2px;width:2px;border-radius:2px;}
 .gauge-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--txt3);}
-.param-mini-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;}
+.param-mini-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;}
 .pmg-item{background:var(--body);border:1px solid var(--bdr);border-radius:10px;padding:10px 8px;text-align:center;transition:transform .2s;}
 .pmg-item:hover{transform:scale(1.05);}
 .pmg-item.pmg-hl{border-color:var(--gold);background:var(--gold-pale);}
@@ -224,6 +230,7 @@ section+section{border-top:1px solid var(--section-bdr);}
   .insight-grid,.insight-grid-2,.chart-grid{grid-template-columns:1fr;}
   .param-mini-grid{grid-template-columns:repeat(3,1fr);}
   .ch{height:200px;}
+  .bod-banner{padding:20px;}
 }
 @media print{.hdr{position:relative;}.hdr-actions{display:none;}#modal-overlay{display:none;}body{background:#fff;}.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
 </style>
@@ -237,7 +244,7 @@ section+section{border-top:1px solid var(--section-bdr);}
     <div class="hdr-tata">A Tata Product</div>
   </div>
   <div class="hdr-sep"></div>
-  <div class="hdr-title">CQ Dashboard &nbsp;·&nbsp; Experience &nbsp;·&nbsp; June 2026</div>
+  <div class="hdr-title">CQ Dashboard &nbsp;·&nbsp; Experience &nbsp;·&nbsp; July 2026</div>
   <div class="hdr-auditor">Auditor: Gourav M</div>
   <div class="hdr-actions">
     <button class="pdf-btn" onclick="window.print()">⬇ Export PDF</button>
@@ -251,75 +258,128 @@ section+section{border-top:1px solid var(--section-bdr);}
   <div class="hero-inner">
     <div class="hero-eyebrow">Quality Assurance &nbsp;·&nbsp; Experience Team</div>
     <div class="hero-title">CQ <span style="font-style:italic;">Dashboard</span></div>
-    <div class="hero-date">June 2026</div>
-    <div class="hero-sub">31 audits &nbsp;·&nbsp; 5 agents &nbsp;·&nbsp; Audited by Gourav M</div>
+    <div class="hero-date">July 2026</div>
+    <div class="hero-sub">16 audits &nbsp;·&nbsp; 3 agents &nbsp;·&nbsp; Audited by Gourav M</div>
     <div class="hero-stats">
-      <div class="hs"><div class="hs-val white" data-countup="31">31</div><div class="hs-lbl">Total Audits</div></div>
-      <div class="hs"><div class="hs-val red" data-countup="54" data-suffix="%">54%</div><div class="hs-lbl">Team CQ</div></div>
+      <div class="hs"><div class="hs-val white" data-countup="16">16</div><div class="hs-lbl">Total Audits</div></div>
+      <div class="hs"><div class="hs-val orange" data-countup="75" data-suffix="%">75%</div><div class="hs-lbl">Team CQ</div></div>
       <div class="hs"><div class="hs-val white" data-countup="95" data-suffix="%">95%</div><div class="hs-lbl">Team Target</div></div>
-      <div class="hs"><div class="hs-val red" data-countup="12">12</div><div class="hs-lbl">NCF</div></div>
-      <div class="hs"><div class="hs-val red" data-countup="34">34</div><div class="hs-lbl">Total Errors</div></div>
+      <div class="hs"><div class="hs-val red" data-countup="2">2</div><div class="hs-lbl">NCF</div></div>
+      <div class="hs"><div class="hs-val orange" data-countup="16">16</div><div class="hs-lbl">Total Errors</div></div>
     </div>
   </div>
 </div>
 
 <div class="main">
 
+  <!-- BOD NOTE -->
+  <section style="padding-top:40px;">
+    <div class="bod-banner">
+      <div class="bod-icon">🤝</div>
+      <div class="bod-lbl">A Note On Workload And Benefit Of The Doubt</div>
+      <div class="bod-txt">
+        <p>Several audits this month were given the benefit of the doubt. Before flagging this as a gap, we want to acknowledge something important: the team has been managing the workload of seven people with only two people covering shifts on most days this month, and still came through with several strong, well handled resolutions under that pressure. That effort deserves genuine appreciation.</p>
+        <p>At the same time, the gaps we saw in follow up, tagging, and callback commitments are things our customers feel directly, through delayed updates, missed calls, and cases that stayed open longer than they should have. Going forward, every audit will be scored strictly against the defined parameters, and no further benefit of the doubt will be given.</p>
+        <p>We are confident that with the right staffing support in place, the team can meet this standard comfortably next month, and we will continue working on getting that support sorted. Thank you for holding things together through a genuinely difficult month.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- AGENT SCORES -->
   <section>
     <div class="sec-ey">Agent Performance</div>
     <div class="sec-ttl">Individual CQ Scores</div>
-    <div class="sec-sub">Click any agent row to view their full report — AOIs, case-level comments, and parameter breakdown.</div>
+    <div class="sec-sub">Click any agent row to view their full report, including AOIs, case level comments, and parameter breakdown.</div>
 
     <div class="target-banner">
       <div class="tb-icon">🎯</div>
       <div class="tb-lbl">Team Target</div>
       <div class="tb-txt">Individual target: <strong style="color:var(--gold-lt)">85%</strong> &nbsp;·&nbsp; Team target: <strong style="color:var(--gold)">95%</strong>. Agents in the 90%+ range are always appreciated. Everyone below their individual target has room to grow.</div>
       <div class="tb-right">
-        <div class="tb-stat"><div class="tb-num gold">0</div><div class="tb-slbl">Above 90%</div></div>
-        <div class="tb-stat"><div class="tb-num green">0</div><div class="tb-slbl">85–90% Range</div></div>
-        <div class="tb-stat"><div class="tb-num red">5</div><div class="tb-slbl">Below 85%</div></div>
+        <div class="tb-stat"><div class="tb-num green">2</div><div class="tb-slbl">Above 90%</div></div>
+        <div class="tb-stat"><div class="tb-num gold">0</div><div class="tb-slbl">85 to 90% Range</div></div>
+        <div class="tb-stat"><div class="tb-num red">1</div><div class="tb-slbl">Below 85%</div></div>
       </div>
     </div>
 
     <table class="score-table">
-      <thead><tr><th>Agent</th><th>Audits</th><th>NCF</th><th>CQ Score</th><th>vs Target</th></tr></thead>
+      <thead><tr><th>Rank</th><th>Agent</th><th>Audits</th><th>NCF</th><th>CQ Score</th><th>vs Target</th></tr></thead>
       <tbody>
-        <tr onclick="openModal('mallika')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#16a34a;">MR</div><div><div class="agent-nm">Mallika_R</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>5</td><td><span class="ncf-badge ncf-flag">1</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="73"></div></div><span class="pct c-orange">73%</span></div></td>
-          <td><span class="ti ti-below">–12% to target</span></td>
-        </tr>
-        <tr onclick="openModal('ajmal')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#dc2626;">AA</div><div><div class="agent-nm">Ajmal_A</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>5</td><td><span class="ncf-badge ncf-flag">1</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="73"></div></div><span class="pct c-orange">73%</span></div></td>
-          <td><span class="ti ti-below">–12% to target</span></td>
-        </tr>
-        <tr onclick="openModal('ankita')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#7c3aed;">AR</div><div><div class="agent-nm">Ankita_R</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>7</td><td><span class="ncf-badge ncf-flag">2</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="57"></div></div><span class="pct c-orange">57%</span></div></td>
-          <td><span class="ti ti-below">–28% to target</span></td>
+        <tr onclick="openModal('kruti')">
+          <td style="font-family:Georgia,serif;font-size:20px;font-weight:800;color:var(--gold);">1</td>
+          <td>
+            <div class="agent-cell">
+              <div class="agent-av" style="background:#2563eb;">KP</div>
+              <div>
+                <div class="agent-nm">Kruti_P <span class="improved-badge">↑ Improved</span></div>
+                <div class="agent-hint">5 audits &middot; 0 NCF</div>
+              </div>
+            </div>
+          </td>
+          <td>5</td>
+          <td><span class="ncf-badge">0</span></td>
+          <td>
+            <div class="bar-cell">
+              <div class="bar-track"><div class="bar-fill bar-green" data-width="96"></div></div>
+              <span class="pct c-green">96%</span>
+            </div>
+          </td>
+          <td><span class="ti ti-above">✓ Above target</span></td>
         </tr>
         <tr onclick="openModal('tisha')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#c8a846;">TJ</div><div><div class="agent-nm">Tisha_J</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>7</td><td><span class="ncf-badge ncf-flag">3</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="48"></div></div><span class="pct c-orange">48%</span></div></td>
-          <td><span class="ti ti-below">–37% to target</span></td>
+          <td style="font-family:Georgia,serif;font-size:20px;font-weight:800;color:var(--gold);">2</td>
+          <td>
+            <div class="agent-cell">
+              <div class="agent-av" style="background:#c8a846;">TJ</div>
+              <div>
+                <div class="agent-nm">Tisha_J <span class="improved-badge">↑ Improved</span></div>
+                <div class="agent-hint">5 audits &middot; 0 NCF</div>
+              </div>
+            </div>
+          </td>
+          <td>5</td>
+          <td><span class="ncf-badge">0</span></td>
+          <td>
+            <div class="bar-cell">
+              <div class="bar-track"><div class="bar-fill bar-gold" data-width="93"></div></div>
+              <span class="pct c-gold">93%</span>
+            </div>
+          </td>
+          <td><span class="ti ti-near">Near team target</span></td>
         </tr>
-        <tr onclick="openModal('kruti')">
-          <td><div class="agent-cell"><div class="agent-av" style="background:#2563eb;">KP</div><div><div class="agent-nm">Kruti_P</div><div class="agent-hint">Click to view full report →</div></div></div></td>
-          <td>7</td><td><span class="ncf-badge ncf-flag">5</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="29"></div></div><span class="pct c-orange">29%</span></div></td>
-          <td><span class="ti ti-below">–56% to target</span></td>
+        <tr onclick="openModal('ankita')">
+          <td style="font-family:Georgia,serif;font-size:20px;font-weight:800;color:var(--gold);">3</td>
+          <td>
+            <div class="agent-cell">
+              <div class="agent-av" style="background:#7c3aed;">AR</div>
+              <div>
+                <div class="agent-nm">Ankita_R</div>
+                <div class="agent-hint">6 audits &middot; 2 NCF</div>
+              </div>
+            </div>
+          </td>
+          <td>6</td>
+          <td><span class="ncf-badge ncf-flag">2</span></td>
+          <td>
+            <div class="bar-cell">
+              <div class="bar-track"><div class="bar-fill bar-orange" data-width="43"></div></div>
+              <span class="pct c-orange">43%</span>
+            </div>
+          </td>
+          <td><span class="ti ti-below">Below target</span></td>
         </tr>
         <tr class="total-row">
-          <td><span class="total-nm">Grand Total</span></td>
-          <td>31</td><td><span class="ncf-badge ncf-flag">12</span></td>
-          <td><div class="bar-cell"><div class="bar-track"><div class="bar-fill bar-orange" data-width="54"></div></div><span class="pct c-orange">54%</span></div></td>
-          <td><span class="ti ti-below">–41% to team target</span></td>
+          <td></td>
+          <td><span class="total-nm">Team Total</span></td>
+          <td>16</td>
+          <td><span class="ncf-badge ncf-flag">2</span></td>
+          <td>
+            <div class="bar-cell">
+              <div class="bar-track"><div class="bar-fill bar-orange" data-width="75"></div></div>
+              <span class="pct c-orange">75%</span>
+            </div>
+          </td>
+          <td><span class="ti ti-below">Below team target</span></td>
         </tr>
       </tbody>
     </table>
@@ -329,34 +389,30 @@ section+section{border-top:1px solid var(--section-bdr);}
   <section>
     <div class="sec-ey">Team Insights</div>
     <div class="sec-ttl">Key Observations</div>
-    <div class="sec-sub">At-a-glance team health, top performers, biggest gaps, and risk flags.</div>
+    <div class="sec-sub">At a glance team health, top performer, biggest gap, and risk flags for July.</div>
     <div class="insight-grid">
-      <div class="ic gold"><div class="ic-label">⭐ Top Performers</div><div class="ic-val gold">73%</div><div class="ic-sub"><strong>Mallika_R &amp; Ajmal_A</strong> lead the team this month at 73% each — both on notice period with 5 audits. Highest scores despite the difficult month.</div></div>
-      <div class="ic red"><div class="ic-label">⚠ NCF This Month</div><div class="ic-val red">12</div><div class="ic-sub"><strong>12 total NCFs</strong> across the team — Kruti_P (5), Tisha_J (3), Ankita_R (2), Ajmal_A (1), Mallika_R (1). A significant spike from last month.</div></div>
-      <div class="ic orange"><div class="ic-label">⚠ Needs Attention</div><div class="ic-val orange">29%</div><div class="ic-sub"><strong>Kruti_P</strong> — lowest CQ this month at 29%, with 5 NCFs and 13 errors across 7 audits. LinkedIn SLA misses and incorrect resolutions are the primary causes.</div></div>
-      <div class="ic purple"><div class="ic-label">📉 Team CQ Drop</div><div class="ic-val purple">–32%</div><div class="ic-sub">Team CQ dropped from <strong>86% (May)</strong> to <strong>54% (June)</strong>. No agent cleared the individual 85% target. Ameyo compliance and detractor call consistency are contributing factors.</div></div>
-      <div class="ic blue"><div class="ic-label">📊 Avg Gap to Target</div><div class="ic-val blue">–41%</div><div class="ic-sub">Team average is 54% vs 95% target — a critical gap. All five agents are below their individual 85% threshold. Immediate coaching intervention required.</div></div>
-      <div class="ic green"><div class="ic-label">✅ Bright Spots</div><div class="ic-val green">7</div><div class="ic-sub">7 clean 100% cases found across the team this month — ownership, follow-up, and resolution were excellent in those audits. Proof the team knows what good looks like.</div></div>
+      <div class="ic green"><div class="ic-label">⭐ Top Performer</div><div class="ic-val green">96%</div><div class="ic-sub"><strong>Kruti_P</strong> leads the team this month at 96%, a big turnaround from 29% in June, and the only agent to clear the 95% team target.</div></div>
+      <div class="ic red"><div class="ic-label">⚠ NCF This Month</div><div class="ic-val red">2</div><div class="ic-sub"><strong>2 non conformances</strong> this month, both from Ankita_R. A sharp drop from 12 across the team in June, but the goal remains zero.</div></div>
+      <div class="ic orange"><div class="ic-label">⚠ Needs Attention</div><div class="ic-val orange">43%</div><div class="ic-sub"><strong>Ankita_R</strong> is lowest this month at 43%, down from 57% in June, with 2 NCFs and 13 errors across 6 audits. Tagging accuracy and ownership on refund cases were the main causes.</div></div>
+      <div class="ic gold"><div class="ic-label">📈 Team CQ Change</div><div class="ic-val gold">+21</div><div class="ic-sub">Team CQ climbed from <strong>54% in June</strong> to <strong>75% in July</strong>, a 21 point improvement, led by strong recoveries from Kruti_P and Tisha_J.</div></div>
+      <div class="ic blue"><div class="ic-label">📊 Avg Gap To Target</div><div class="ic-val blue">20%</div><div class="ic-sub">Team average is 75% against the 95% target, a 20 point gap. Two of the three agents have already cleared their individual 85% target.</div></div>
+      <div class="ic purple"><div class="ic-label">✅ Bright Spots</div><div class="ic-val purple">8</div><div class="ic-sub">8 clean 100% cases were found across the team this month out of 16 total audits, more than half. Ownership and follow up were excellent in these cases.</div></div>
     </div>
     <div class="insight-grid-2">
       <div class="ic gold">
-        <div class="ic-label">📌 Agents Ranked by Total Errors</div>
+        <div class="ic-label">📌 Agents Ranked By Total Errors</div>
         <div style="margin-top:10px;display:flex;flex-direction:column;gap:7px;">
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Kruti_P</span><span style="font-weight:700;color:var(--red);">13 errors</span></div>
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Tisha_J</span><span style="font-weight:700;color:var(--red);">9 errors</span></div>
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Ankita_R</span><span style="font-weight:700;color:var(--orange);">5 errors</span></div>
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Ajmal_A</span><span style="font-weight:700;color:var(--orange);">4 errors</span></div>
-          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Mallika_R</span><span style="font-weight:700;color:var(--blue);">3 errors</span></div>
+          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Ankita_R</span><span style="font-weight:700;color:var(--red);">13 errors</span></div>
+          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Kruti_P</span><span style="font-weight:700;color:var(--blue);">2 errors</span></div>
+          <div style="display:flex;justify-content:center;align-items:center;gap:12px;font-size:13px;"><span style="font-weight:600;color:var(--txt)">Tisha_J</span><span style="font-weight:700;color:var(--blue);">1 error</span></div>
         </div>
       </div>
       <div class="ic blue">
         <div class="ic-label">🎯 Biggest Gap Per Agent</div>
         <div style="margin-top:10px;display:flex;flex-direction:column;gap:7px;text-align:center;">
-          <div style="font-size:13px;color:var(--txt2);"><strong>Mallika_R</strong> — Solution (re-asked for details already shared; NCF)</div>
-          <div style="font-size:13px;color:var(--txt2);"><strong>Ajmal_A</strong> — Solution &amp; Follow Up (LinkedIn NCF; no closure follow-up)</div>
-          <div style="font-size:13px;color:var(--txt2);"><strong>Ankita_R</strong> — Solution &amp; Follow Up (RCA case; detractor call not checked on Oneview)</div>
-          <div style="font-size:13px;color:var(--txt2);"><strong>Tisha_J</strong> — Solution &amp; Follow Up (TC policy gap; copy-paste responses; tickets closed early)</div>
-          <div style="font-size:13px;color:var(--txt2);"><strong>Kruti_P</strong> — Solution &amp; Follow Up (incorrect info; LinkedIn SLA; no Ameyo calls)</div>
+          <div style="font-size:13px;color:var(--txt2);"><strong>Ankita_R</strong>: Tagging and Solution, incorrect tags and refund ownership across two non conformances</div>
+          <div style="font-size:13px;color:var(--txt2);"><strong>Kruti_P</strong>: Tagging, disposition accuracy on two cases</div>
+          <div style="font-size:13px;color:var(--txt2);"><strong>Tisha_J</strong>: Solution &amp; Recommendation, one missed customer callback commitment</div>
         </div>
       </div>
     </div>
@@ -365,71 +421,65 @@ section+section{border-top:1px solid var(--section-bdr);}
   <!-- PARAMETER BREAKDOWN -->
   <section>
     <div class="sec-ey">Error Analysis</div>
-    <div class="sec-ttl">Parameter-wise Error Breakdown</div>
+    <div class="sec-ttl">Parameter wise Error Breakdown</div>
     <div class="sec-sub">Click a parameter header to expand. Click an agent row to open their full report with those cases highlighted.</div>
-
-    <div class="param-block">
-      <div class="param-hdr" onclick="toggleParam('sol')">
-        <span class="param-hdr-name">Solution &amp; Recommendation</span>
-        <div class="param-hdr-right"><span class="param-hdr-count">13 errors</span><span class="param-arrow" id="parr-sol">▼</span></div>
-      </div>
-      <div class="param-body" id="pbody-sol">
-        <div class="param-agent-row" onclick="openModal('kruti','sol')"><span class="par-name">Kruti_P</span><span class="par-count c4">5</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('tisha','sol')"><span class="par-name">Tisha_J</span><span class="par-count c3">4</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('ankita','sol')"><span class="par-name">Ankita_R</span><span class="par-count c2">2</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('ajmal','sol')"><span class="par-name">Ajmal_A</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('mallika','sol')"><span class="par-name">Mallika_R</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
-      </div>
-    </div>
-
-    <div class="param-block">
-      <div class="param-hdr" onclick="toggleParam('fu')">
-        <span class="param-hdr-name">Follow Up</span>
-        <div class="param-hdr-right"><span class="param-hdr-count">10 errors</span><span class="param-arrow" id="parr-fu">▼</span></div>
-      </div>
-      <div class="param-body" id="pbody-fu">
-        <div class="param-agent-row" onclick="openModal('tisha','fu')"><span class="par-name">Tisha_J</span><span class="par-count c3">4</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('kruti','fu')"><span class="par-name">Kruti_P</span><span class="par-count c3">3</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('ajmal','fu')"><span class="par-name">Ajmal_A</span><span class="par-count c2">2</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('ankita','fu')"><span class="par-name">Ankita_R</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
-      </div>
-    </div>
 
     <div class="param-block">
       <div class="param-hdr" onclick="toggleParam('tag')">
         <span class="param-hdr-name">Tagging</span>
-        <div class="param-hdr-right"><span class="param-hdr-count">4 errors</span><span class="param-arrow" id="parr-tag">▼</span></div>
+        <div class="param-hdr-right"><span class="param-hdr-count">7 errors</span><span class="param-arrow" id="parr-tag">▼</span></div>
       </div>
       <div class="param-body" id="pbody-tag">
-        <div class="param-agent-row" onclick="openModal('tisha','tag')"><span class="par-name">Tisha_J</span><span class="par-count c2">2</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('kruti','tag')"><span class="par-name">Kruti_P</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('ankita','tag')"><span class="par-name">Ankita_R</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('ankita','tag')"><span class="par-name">Ankita_R</span><span class="par-count c5">5</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('kruti','tag')"><span class="par-name">Kruti_P</span><span class="par-count c2">2</span><button class="par-btn">View Cases</button></div>
+      </div>
+    </div>
+
+    <div class="param-block">
+      <div class="param-hdr" onclick="toggleParam('sol')">
+        <span class="param-hdr-name">Solution &amp; Recommendation</span>
+        <div class="param-hdr-right"><span class="param-hdr-count">5 errors</span><span class="param-arrow" id="parr-sol">▼</span></div>
+      </div>
+      <div class="param-body" id="pbody-sol">
+        <div class="param-agent-row" onclick="openModal('ankita','sol')"><span class="par-name">Ankita_R</span><span class="par-count c4">4</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('tisha','sol')"><span class="par-name">Tisha_J</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
       </div>
     </div>
 
     <div class="param-block">
       <div class="param-hdr" onclick="toggleParam('ss')">
         <span class="param-hdr-name">Soft Skills</span>
-        <div class="param-hdr-right"><span class="param-hdr-count">3 errors</span><span class="param-arrow" id="parr-ss">▼</span></div>
+        <div class="param-hdr-right"><span class="param-hdr-count">2 errors</span><span class="param-arrow" id="parr-ss">▼</span></div>
       </div>
       <div class="param-body" id="pbody-ss">
-        <div class="param-agent-row" onclick="openModal('mallika','ss')"><span class="par-name">Mallika_R</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('ajmal','ss')"><span class="par-name">Ajmal_A</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
-        <div class="param-agent-row" onclick="openModal('ankita','ss')"><span class="par-name">Ankita_R</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
+        <div class="param-agent-row" onclick="openModal('ankita','ss')"><span class="par-name">Ankita_R</span><span class="par-count c2">2</span><button class="par-btn">View Cases</button></div>
       </div>
     </div>
 
     <div class="param-block">
-      <div class="param-hdr" style="cursor:default;opacity:.8;">
+      <div class="param-hdr" onclick="toggleParam('fu')">
+        <span class="param-hdr-name">Follow Up</span>
+        <div class="param-hdr-right"><span class="param-hdr-count">1 error</span><span class="param-arrow" id="parr-fu">▼</span></div>
+      </div>
+      <div class="param-body" id="pbody-fu">
+        <div class="param-agent-row" onclick="openModal('ankita','fu')"><span class="par-name">Ankita_R</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
+      </div>
+    </div>
+
+    <div class="param-block">
+      <div class="param-hdr" onclick="toggleParam('prob')">
         <span class="param-hdr-name">Probing</span>
-        <span style="font-size:12px;font-weight:700;color:#4ade80;">✓ 0 errors — Well done!</span>
+        <div class="param-hdr-right"><span class="param-hdr-count">1 error</span><span class="param-arrow" id="parr-prob">▼</span></div>
+      </div>
+      <div class="param-body" id="pbody-prob">
+        <div class="param-agent-row" onclick="openModal('ankita','prob')"><span class="par-name">Ankita_R</span><span class="par-count c1">1</span><button class="par-btn">View Cases</button></div>
       </div>
     </div>
 
     <div class="param-block">
       <div class="param-hdr" style="cursor:default;opacity:.8;">
-        <span class="param-hdr-name">Call / Chat Etiquette</span>
-        <span style="font-size:12px;font-weight:700;color:#4ade80;">✓ 0 errors — Well done!</span>
+        <span class="param-hdr-name">Call/Chat Etiquette</span>
+        <span style="font-size:12px;font-weight:700;color:#4ade80;">✓ 0 errors, well done!</span>
       </div>
     </div>
   </section>
@@ -452,12 +502,12 @@ section+section{border-top:1px solid var(--section-bdr);}
       </div>
       <div class="chart-card">
         <div class="cc-title">Errors per Agent</div>
-        <div class="cc-sub">Total audit errors by agent — highest to lowest</div>
+        <div class="cc-sub">Total audit errors by agent, highest to lowest</div>
         <div class="ch"><canvas id="agentErrorChart"></canvas></div>
       </div>
       <div class="heatmap-card">
         <div class="cc-title">Error Heatmap</div>
-        <div class="cc-sub">Agent × parameter breakdown — spot who struggles where at a glance</div>
+        <div class="cc-sub">Agent by parameter breakdown, spot who struggles where at a glance</div>
         <div id="heatmapContainer"></div>
       </div>
     </div>
@@ -470,7 +520,7 @@ section+section{border-top:1px solid var(--section-bdr);}
     <img src="logo_full.png" class="ft-logo" alt="CaratLane" onerror="this.style.display='none'">
     <div><div class="ft-brand">CaratLane</div><div class="ft-tata">A Tata Product</div></div>
   </div>
-  <div class="ft-right"><strong>CQ Dashboard — Experience</strong><br>June 2026 · 31 Audits<br>Auditor: <strong>Gourav M</strong> · Quality Analyst</div>
+  <div class="ft-right"><strong>CQ Dashboard &middot; Experience</strong><br>July 2026 &middot; 16 Audits<br>Auditor: <strong>Gourav M</strong> &middot; Quality Analyst</div>
 </footer>
 
 <div id="modal-overlay">

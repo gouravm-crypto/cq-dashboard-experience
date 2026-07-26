@@ -28,7 +28,7 @@ function buildModalBody(agentKey, highlightParam) {
     : `✓ Individual target met · ${teamTarget - a.cq > 0 ? (teamTarget - a.cq) + '% to team target (95%)' : 'Team target met!'}`;
   const pctColor = a.cq >= 90 ? '#b8860b' : a.cq >= 85 ? '#16a34a' : '#ea580c';
 
-  // Note for Mallika
+  // Optional per agent note
   if (a.note) {
     html += `<div style="background:var(--blue-pale);border:1px solid var(--blue);border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:var(--blue);"><strong>ℹ Note:</strong> ${a.note}</div>`;
   }
@@ -76,7 +76,7 @@ function buildModalBody(agentKey, highlightParam) {
   });
   html += `</div>`;
 
-  html += `<div class="modal-sec-lbl">Audit Cases — ${a.audits} total${a.note ? ' (see note above)' : ''}</div>`;
+  html += `<div class="modal-sec-lbl">Audit Cases, ${a.audits} total${a.note ? ' (see note above)' : ''}</div>`;
   a.cases.forEach((c, i) => {
     const hl = highlightParam && a.paramCaseMap[highlightParam] && a.paramCaseMap[highlightParam].includes(i);
     const sbClass = getScoreBadgeClass(c.score);
@@ -103,7 +103,7 @@ function openModal(agentKey, highlightParam) {
   const a = AGENTS[agentKey];
   if (!a) return;
   document.getElementById('m-name').textContent = a.name;
-  document.getElementById('m-role').textContent = 'Experience Team · May 2026';
+  document.getElementById('m-role').textContent = 'Experience Team · July 2026';
   document.getElementById('m-metrics').innerHTML = buildMetricsHTML(a);
   document.getElementById('m-body').innerHTML = buildModalBody(agentKey, highlightParam || null);
   document.getElementById('modal-overlay').classList.add('open');
