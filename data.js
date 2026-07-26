@@ -2,7 +2,7 @@ const AGENTS = {
   kruti: {
     name:"Kruti_P", initials:"KP", color:"#2563eb",
     cq:96, audits:5, ncf:0, totalErrors:2,
-    note:"Kruti's CQ has climbed sharply this month, from 29% in June to 96% in July. Consistent, clean handling across almost every escalation this month.",
+    note:"Kruti's CQ has climbed from 29% in June to 96% in July. Several cases this month were given benefit of the doubt while the team was running short staffed, so this should be read as encouraging but not yet a fully clean result. Worth watching closely once benefit of the doubt is no longer given from next month.",
     params:{ss:0, sol:0, prob:0, fu:0, tag:2, cc:0},
     aois:[
       {cat:"tag", label:"Tagging", text:"Match the disposition and tag to what the customer actually reported, not to the option that looks closest. On both flagged cases this month, the tag chosen did not match the customer's own description of the issue. A quick reread of the customer's message before closing avoids this."}
@@ -19,7 +19,7 @@ const AGENTS = {
   tisha: {
     name:"Tisha_J", initials:"TJ", color:"#c8a846",
     cq:93, audits:5, ncf:0, totalErrors:1,
-    note:"Tisha's CQ has improved well this month, from 48% in June to 93% in July.",
+    note:"Tisha's CQ has climbed from 48% in June to 93% in July. As with Kruti, several of her cases this month carried benefit of the doubt given the staffing gap, so this should be read as encouraging but not yet a fully clean result. Worth watching closely once benefit of the doubt is no longer given from next month.",
     params:{ss:0, sol:1, prob:0, fu:0, tag:0, cc:0},
     aois:[
       {cat:"sol", label:"Solution & Rec.", text:"When a customer callback is specifically requested, whether by the store or in the case notes, that call needs to happen. Speaking with the store alone does not close the loop for the customer waiting on the other end. Please follow through on direct callback commitments every time, even when the update itself has already been shared internally."}
